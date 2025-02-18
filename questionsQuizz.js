@@ -166,7 +166,7 @@ export const culture_Quizz = {
     },
 
     {
-      text:"Avec qu'elle marque de téléphone est sortie le jeux Snake ? ",
+      question:"Avec qu'elle marque de téléphone est sortie le jeux Snake ? ",
       options: [
         "Samsung",
         "Iphone",
