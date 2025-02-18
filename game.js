@@ -38,5 +38,6 @@ nextButton.addEventListener("click", () => {
         questions.innerHTML = '';
         nextButton.style.display = 'none';
     }
+});
 
-}) 
+
