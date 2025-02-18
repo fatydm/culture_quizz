@@ -1,7 +1,7 @@
 export const culture_Quizz = {
   questions: [
     {
-      question : "Quel célèbre acteur s’est fait connaitre dans les années 1990 dans la série médicale Urgences ?",
+      question : "Quel célèbre acteur s'est fait connaitre dans les années 1990 dans la série médicale Urgences ?",
       options: [
         "Sean Penn.",
         "Pierce Brosman.",
@@ -163,6 +163,17 @@ export const culture_Quizz = {
         "MOBA (Multiplayer Online Battle arena)"
       ],
       correct_answer: "FPS (Firts Person Shooter)"
+    },
+
+    {
+      text:"Avec qu'elle marque de téléphone est sortie le jeux Snake ? ",
+      options: [
+        "Samsung",
+        "Iphone",
+        "BlackBerry",
+        "Nokia"
+      ],
+      correct_answer: "Nokia"
     },
   ]
 };

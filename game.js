@@ -27,3 +27,13 @@ options.innerHTML = '';
 }
 
 loadQuestion(currentQuestionIndex)
+
+nextButton.addEventListener("click" , () => {
+    if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
+        currentQuestionIndex++; 
+        loadQuestion(currentQuestionIndex)
+    } else  {
+        console.log("Fin du Quiz")
+    }
+
+}) 
