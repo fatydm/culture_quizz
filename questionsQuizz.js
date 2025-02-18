@@ -1,7 +1,7 @@
 export const culture_Quizz = {
   questions: [
     {
-      question : "Quel célèbre acteur s'est fait connaitre dans les années 1990 dans la série médicale Urgences ?",
+      question: "Quel célèbre acteur s'est fait connaitre dans les années 1990 dans la série médicale Urgences ?",
       options: [
         "Sean Penn.",
         "Pierce Brosman.",
@@ -155,7 +155,7 @@ export const culture_Quizz = {
       correct_answer: "6 (3, 7, 12, 16 , 18 ans, ! = contrôle parental"
     },
     {
-      question: "A quel type de jeux appartient le jeux vidéos Call of Duty",
+      question: "A quel type de jeux appartient le jeux vidéo Call of Duty",
       options: [
         "FPS (Firts Person Shooter)",
         "MMORPG (Massively multiplayer online role-playing game)",
@@ -166,7 +166,7 @@ export const culture_Quizz = {
     },
 
     {
-      question:"Avec qu'elle marque de téléphone est sortie le jeux Snake ? ",
+      question:"Quelle marque de téléphone a sorti le jeux Snake ? ",
       options: [
         "Samsung",
         "Iphone",
