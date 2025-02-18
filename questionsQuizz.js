@@ -52,128 +52,128 @@ export const culture_Quizz = {
       correct_answer: "C'est un plat Vietnamien."
     },
 
-    // {
-    //   question: "Quelle est l'origine du croissant ?",
-    //   options: [
-    //     "Viennoise",
-    //     "Hongroise",
-    //     "Française",
-    //     "Anglaise"
-    //   ],
-    //   correct_answer: "Elle milite pour l'éducation des jeunes filles en astronomie."
-    // },
+    {
+      question: "Quelle est l'origine du croissant ?",
+      options: [
+        "Viennoise",
+        "Hongroise",
+        "Française",
+        "Anglaise"
+      ],
+      correct_answer: "Elle milite pour l'éducation des jeunes filles en astronomie."
+    },
 
-    // {
-    //   question: "l'Île de Madagascar fait partie:",
-    //   options: [
-    //     "des Îles du trapèze des Mascareignes",
-    //     "des Antilles Françaises",
-    //     "des Îles Marquises ",
-    //     "de l'Archipel des Comores"
-    //   ],
-    //   correct_answer: "des Îles du trapèze des Mascareignes"
-    // },
+    {
+      question: "l'Île de Madagascar fait partie:",
+      options: [
+        "des Îles du trapèze des Mascareignes",
+        "des Antilles Françaises",
+        "des Îles Marquises ",
+        "de l'Archipel des Comores"
+      ],
+      correct_answer: "des Îles du trapèze des Mascareignes"
+    },
 
-    // {
-    //   question: "Quelle est la capitale de l'Australie ?",
-    //   options: [
-    //     "Perth",
-    //     "Melbourne",
-    //     "Sydney",
-    //     "Canberra"
-    //   ],
-    //   correct_answer: "Canberra"
-    // },
-    // {
-    //   question: "Quelle est le style littéraire de Molière ?",
-    //   options: [
-    //     "Roman sentimentale",
-    //     "Théâtre",
-    //     "Roman satyrique",
-    //     "Roman comique"
-    //   ],
-    //   correct_answer: "Théâtre"
-    // },
-    // {
-    //   question: "Combien de tomes comporte la série de livres Harry Potter ?",
-    //   options: [
-    //     "5",
-    //     "6",
-    //     "7",
-    //     "8"
-    //   ],
-    //   correct_answer: "6"
-    // },
-    // {
-    //   question: "Le livre Le seigneur des anneaux est sorti durant quelle décennie ?",
-    //   options: [
-    //     "1950",
-    //     "1970",
-    //     "1980",
-    //     "1990"
-    //   ],
-    //   correct_answer: "1950"
-    // },
-    // {
-    //   question: "Lequel de ces auteurs est un homme ?",
-    //   options: [
-    //     "Yasmina Khadra",
-    //     "Amélie Nothomb",
-    //     "Laurell Hamilton",
-    //     "Véronique Alunni"
-    //   ],
-    //   correct_answer: "Yasmina Khadra"
-    // },
-    // {
-    //   question: "Quel est la console la plus vendu de tous les temps ?",
-    //   options: [
-    //     "Gameboy",
-    //     "Nitendo DS",
-    //     "Nitendo Switch",
-    //     "Playstation 2"
-    //   ],
-    //   correct_answer: "Playstation 2"
-    // },
-    // {
-    //   question: "Quel est le jeux vidéos le plus vendu du monde ?",
-    //   options: [
-    //     "Grand Theft Auto V (GTA V)",
-    //     "Mario Kart 6 / Deluxe",
-    //     "Minecraft",
-    //     "WII Sport"
-    //   ],
-    //   correct_answer: "Minecraft"
-    // },
-    // {
-    //   question: "Combien il y a t-il de classification pour les jeux vidéos ?",
-    //   options: [
-    //     "3",
-    //     "5",
-    //     "6",
-    //     "7"
-    //   ],
-    //   correct_answer: "6 (3, 7, 12, 16 , 18 ans, ! = contrôle parental"
-    // },
-    // {
-    //   question: "A quel type de jeux appartient le jeux vidéos Call of Duty",
-    //   options: [
-    //     "FPS (Firts Person Shooter)",
-    //     "MMORPG (Massively multiplayer online role-playing game)",
-    //     "RTS (Real Time Strategy)",
-    //     "MOBA (Multiplayer Online Battle arena)"
-    //   ],
-    //   correct_answer: "FPS (Firts Person Shooter)"
-    // },
+    {
+      question: "Quelle est la capitale de l'Australie ?",
+      options: [
+        "Perth",
+        "Melbourne",
+        "Sydney",
+        "Canberra"
+      ],
+      correct_answer: "Canberra"
+    },
+    {
+      question: "Quelle est le style littéraire de Molière ?",
+      options: [
+        "Roman sentimentale",
+        "Théâtre",
+        "Roman satyrique",
+        "Roman comique"
+      ],
+      correct_answer: "Théâtre"
+    },
+    {
+      question: "Combien de tomes comporte la série de livres Harry Potter ?",
+      options: [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      correct_answer: "6"
+    },
+    {
+      question: "Le livre Le seigneur des anneaux est sorti durant quelle décennie ?",
+      options: [
+        "1950",
+        "1970",
+        "1980",
+        "1990"
+      ],
+      correct_answer: "1950"
+    },
+    {
+      question: "Lequel de ces auteurs est un homme ?",
+      options: [
+        "Yasmina Khadra",
+        "Amélie Nothomb",
+        "Laurell Hamilton",
+        "Véronique Alunni"
+      ],
+      correct_answer: "Yasmina Khadra"
+    },
+    {
+      question: "Quel est la console la plus vendu de tous les temps ?",
+      options: [
+        "Gameboy",
+        "Nitendo DS",
+        "Nitendo Switch",
+        "Playstation 2"
+      ],
+      correct_answer: "Playstation 2"
+    },
+    {
+      question: "Quel est le jeux vidéos le plus vendu du monde ?",
+      options: [
+        "Grand Theft Auto V (GTA V)",
+        "Mario Kart 6 / Deluxe",
+        "Minecraft",
+        "WII Sport"
+      ],
+      correct_answer: "Minecraft"
+    },
+    {
+      question: "Combien il y a t-il de classification pour les jeux vidéos ?",
+      options: [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      correct_answer: "6 (3, 7, 12, 16 , 18 ans, ! = contrôle parental"
+    },
+    {
+      question: "A quel type de jeux appartient le jeux vidéos Call of Duty",
+      options: [
+        "FPS (Firts Person Shooter)",
+        "MMORPG (Massively multiplayer online role-playing game)",
+        "RTS (Real Time Strategy)",
+        "MOBA (Multiplayer Online Battle arena)"
+      ],
+      correct_answer: "FPS (Firts Person Shooter)"
+    },
 
-    // {
-    //   text:"Avec qu'elle marque de téléphone est sortie le jeux Snake ? ",
-    //   options: [
-    //     "Samsung",
-    //     "Iphone",
-    //     "BlackBerry",
-    //     "Nokia"
-    //   ],
-    //   correct_answer: "Nokia"
-    // },
+    {
+      text:"Avec qu'elle marque de téléphone est sortie le jeux Snake ? ",
+      options: [
+        "Samsung",
+        "Iphone",
+        "BlackBerry",
+        "Nokia"
+      ],
+      correct_answer: "Nokia"
+    },
   ]
 };
