@@ -37,7 +37,11 @@ nextButton.addEventListener("click", () => {
         questions.innerText = 'Fin du Quizz !';
         options.innerHTML = '';
         nextButton.style.display = 'none';
+<<<<<<< HEAD
         replayButton.style.display = 'block';
+=======
+        replayButton.style.display ='inline-block'
+>>>>>>> refs/remotes/origin/main
     }
 
 }); 
