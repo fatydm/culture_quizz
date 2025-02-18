@@ -34,10 +34,13 @@ nextButton.addEventListener("click", () => {
         currentQuestionIndex++;
         loadQuestion(currentQuestionIndex)
     } else {
+        questions.innerText = 'Fin du Quizz !';
         options.innerHTML = '';
-        questions.innerHTML = '';
         nextButton.style.display = 'none';
+        replayButton.style.display = 'block';
     }
 });
 
 
+
+}) 
