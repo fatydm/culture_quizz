@@ -34,9 +34,26 @@ nextButton.addEventListener("click", () => {
         currentQuestionIndex++;
         loadQuestion(currentQuestionIndex)
     } else {
+        questions.innerText = 'Fin du Quizz !';
         options.innerHTML = '';
-        questions.innerHTML = '';
         nextButton.style.display = 'none';
+        replayButton.style.display = 'block';
     }
 
-}) 
+}); 
+
+replayButton.addEventListener('click', () => { 
+
+    //réinitialisation à 0 du Quiz
+    currentQuestionIndex = 0;
+
+    // On cache le bouton 'rejouer'
+    replayButton.style.display = 'none';
+
+    // on appelle la fonction displayQuestion avec en argument la fonction réinitialisée
+    loadQuestion(currentQuestionIndex);
+
+    nextButton.style.display = 'block';
+
+    
+});
