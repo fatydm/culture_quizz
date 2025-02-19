@@ -55,16 +55,11 @@ replayButton.addEventListener('click', () => {
     
 });
 
-<<<<<<< HEAD
-=======
         if (selectedAnwser === goodAnswer) {
             options.innerHTML = ''
             questions.innerText = 'Bonne réponse'
         } else if (selectedAnwser != goodAnswer) {
            options.innerText = 'La bonne réponse est ' + ' ' + goodAnswer
         }
-    }
+        
     checkAnswer(selectedAnswer);
-
-})
->>>>>>> 40ecf329cde75e204b68e5fa5c5dcd3441c4af92
