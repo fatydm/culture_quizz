@@ -11,7 +11,7 @@ const replayButton = document.getElementById('replay-button');
 function loadQuestion(index) {
     // Vider le conteneur des options
     options.innerHTML = '';
-
+    nextButton.style.display ="disabled";
     // Récupérer la question actuelle
     const currentQuestion = culture_Quizz.questions[index];
 
@@ -57,4 +57,19 @@ replayButton.addEventListener('click', () => {
 
     
 });
-
+// //On récupère l'option sur laquelle à cliqué le joueur
+// culture_Quizz.options.option.addEventListener("click",() =>{
+//     nextButton.style.    
+// })
+options.option.addEventListener("click",() =>{
+    // if ("click")
+    // {
+    //     console.log("Tu as cliqué");
+    // }
+    if ("click" ) 
+      {
+        nextButton.querySelector("#next-button").d
+        console.log("Tu as cliqué");
+      } 
+    
+})

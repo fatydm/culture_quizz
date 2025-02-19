@@ -82,7 +82,7 @@ export const culture_Quizz = {
         "Sydney",
         "Canberra"
       ],
-      correct_answer: "Canberra"
+      correctAnswerIndex: "Canberra"
     },
     {
       question: "Quelle est le style littéraire de Molière ?",
@@ -92,7 +92,7 @@ export const culture_Quizz = {
         "Roman satyrique",
         "Roman comique"
       ],
-      correct_answer: "Théâtre"
+      correctAnswerIndex: 1
     },
     {
       question: "Combien de tomes comporte la série de livres Harry Potter ?",
@@ -102,7 +102,7 @@ export const culture_Quizz = {
         "7",
         "8"
       ],
-      correct_answer: "6"
+      correctAnswerIndex: 1
     },
     {
       question: "Le livre Le seigneur des anneaux est sorti durant quelle décennie ?",
@@ -112,7 +112,7 @@ export const culture_Quizz = {
         "1980",
         "1990"
       ],
-      correct_answer: "1950"
+      correctAnswerIndex: 0
     },
     {
       question: "Lequel de ces auteurs est un homme ?",
@@ -122,8 +122,19 @@ export const culture_Quizz = {
         "Laurell Hamilton",
         "Véronique Alunni"
       ],
-      correct_answer: "Yasmina Khadra"
+      correctAnswerIndex: 0
     },
+    {
+      question: "Lequel de ces auteurs est une femme ?",
+      options: [
+        "Maxime Chattam",
+        "Fred Vargas",
+        "Arthur Conan Doyle",
+        "Franck Thilliez"
+      ],
+      correctAnswerIndex: 0
+    },
+    
     {
       question: "Quel est la console la plus vendu de tous les temps ?",
       options: [

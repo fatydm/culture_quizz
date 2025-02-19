@@ -37,3 +37,9 @@ button {
     display: flex;
     justify-content: flex-end;
 }
+
+#next-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
