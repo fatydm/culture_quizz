@@ -60,7 +60,7 @@ export const culture_Quizz = {
         "C'est un plat Vietnamien",
         "C'est un plat Népalais"
       ],
-      correct_answer: 2
+      correctAnswerIndex: 2
     },
 
     {
@@ -71,7 +71,7 @@ export const culture_Quizz = {
         "Française",
         "Anglaise"
       ],
-      correct_answer: 0
+      correctAnswerIndex: 0
     },
 
     {
@@ -82,7 +82,7 @@ export const culture_Quizz = {
         "des Îles Marquises ",
         "de l'Archipel des Comores"
       ],
-      correct_answer: 0
+      correctAnswerIndex: 0
     },
 
     {
@@ -93,7 +93,7 @@ export const culture_Quizz = {
         "Sydney",
         "Canberra"
       ],
-      correct_answer: 3
+      correctAnswerIndex: 3
     },
 
     {
@@ -104,7 +104,7 @@ export const culture_Quizz = {
         "En Italie: le Colisée",
         "Au Pérou: Le Machu Picchu"
       ],
-      correct_answer: 1
+      correctAnswerIndex: 1
     },
 
     {
