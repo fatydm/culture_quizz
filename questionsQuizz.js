@@ -50,8 +50,6 @@ export const culture_Quizz = {
       ],
       correctAnswerIndex: 2
     },
-
-
     {
       question: "Quelle est l'origine du Bò bún ?",
       options: [

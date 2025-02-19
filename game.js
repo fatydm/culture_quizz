@@ -55,8 +55,13 @@ replayButton.addEventListener('click', () => {
     
 });
 
-<<<<<<< HEAD
-=======
+options.addEventListener('click', (event) => {
+    const selectedAnswer = event.target.innerText; // Récupère la réponse cliquée
+    const currentQuestion = culture_Quizz.questions[currentQuestionIndex]; // Récupère la question en cours
+    const goodAnswer = currentQuestion.options[currentQuestion.correctAnswerIndex]; // Bonne réponse
+
+    function checkAnswer(selectedAnwser) {
+
         if (selectedAnwser === goodAnswer) {
             options.innerHTML = ''
             questions.innerText = 'Bonne réponse'
@@ -67,4 +72,3 @@ replayButton.addEventListener('click', () => {
     checkAnswer(selectedAnswer);
 
 })
->>>>>>> 40ecf329cde75e204b68e5fa5c5dcd3441c4af92
