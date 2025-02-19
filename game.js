@@ -39,15 +39,12 @@ nextButton.addEventListener("click", () => {
         nextButton.style.display = 'none';
         replayButton.style.display = 'block';
     }
+});
 
-}); 
-
-replayButton.addEventListener('click', () => { 
-
-    //réinitialisation à 0 du Quiz
-    currentQuestionIndex = 0;
-
-    // On cache le bouton 'rejouer'
+replayButton.addEventListener('click', () => {
+    currentQuestionIndex = 0
+    loadQuestion(currentQuestionIndex)
+    nextButton.style.display = 'block';
     replayButton.style.display = 'none';
 
     // on appelle la fonction displayQuestion avec en argument la fonction réinitialisée
@@ -57,19 +54,4 @@ replayButton.addEventListener('click', () => {
 
     
 });
-// //On récupère l'option sur laquelle à cliqué le joueur
-// culture_Quizz.options.option.addEventListener("click",() =>{
-//     nextButton.style.    
-// })
-options.option.addEventListener("click",() =>{
-    // if ("click")
-    // {
-    //     console.log("Tu as cliqué");
-    // }
-    if ("click" ) 
-      {
-        nextButton.querySelector("#next-button").d
-        console.log("Tu as cliqué");
-      } 
-    
-})
+
