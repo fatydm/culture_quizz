@@ -41,4 +41,28 @@ nextButton.addEventListener("click", () => {
     }
 });
 
+replayButton.addEventListener('click', () => {
+    currentQuestionIndex = 0
+    loadQuestion(currentQuestionIndex)
+    nextButton.style.display = 'block';
+    replayButton.style.display = 'none';
+})
 
+
+options.addEventListener('click', (event) => {
+    const selectedAnswer = event.target.innerText; // Récupère la réponse cliquée
+    const currentQuestion = culture_Quizz.questions[currentQuestionIndex]; // Récupère la question en cours
+    const goodAnswer = currentQuestion.options[currentQuestion.correctAnswerIndex]; // Bonne réponse
+
+    function checkAnswer(selectedAnwser) {
+
+        if (selectedAnwser === goodAnswer) {
+            options.innerHTML = ''
+            questions.innerText = 'Bonne réponse'
+        } else if (selectedAnwser != goodAnswer) {
+           options.innerText = 'La bonne réponse est ' + ' ' + goodAnswer
+        }
+    }
+    checkAnswer(selectedAnswer);
+
+})

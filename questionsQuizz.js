@@ -8,7 +8,7 @@ export const culture_Quizz = {
         "George Clooney.",
         "Jean Dujardin."
       ],
-      correctAnswerIndex: "George Clooney."
+      correctAnswerIndex: 2
     },
     {
       question: "Dans 'Le Comte de Monte-Cristo' d'Alexandre Dumas, quel est le nom de la prison où Edmond Dantès est emprisonné pendant 14 ans ?",
@@ -18,7 +18,7 @@ export const culture_Quizz = {
         "Fort Boyard.",
         "Mont Saint-Michel."
       ],
-      correctAnswerIndex: "Château d'If."
+      correctAnswerIndex: 0
     },
     {
       question: "Dans 'Prison Break', quel est le nom du personnage qui, avant de rejoindre les évadés, est un tueur à gages travaillant pour la mafia, et qui aide Michael Scofield et les autres à s'évader lors de la saison 1 ?",
@@ -28,7 +28,7 @@ export const culture_Quizz = {
         "Benjamin Miles Franklin",
         "James Whistler."
       ],
-      correctAnswerIndex: "John Abruzzi."
+      correctAnswerIndex: 0
     },
     {
       question: "Dans 'La Casa de Papel', quel est le véritable nom de l'homme qui se cache sous le masque de Salvador Dalí et qui porte le nom de 'Le Professeur' ?",
@@ -38,8 +38,19 @@ export const culture_Quizz = {
         "Rafael de la Mora",
         "James Whistler."
       ],
-      correctAnswerIndex: "Sergio Marquina."
+      correctAnswerIndex: 1
     },
+    {
+      question: "En quelle année est sorti le 1er 'Sister Act' avec Whoopi Goldberg",
+      options: [
+        "1982.",
+        "1988.",
+        "1992",
+        "1996."
+      ],
+      correctAnswerIndex: 2
+    },
+
 
     {
       question: "Quelle est l'origine du Bò bún ?",
@@ -49,7 +60,7 @@ export const culture_Quizz = {
         "C'est un plat Vietnamien",
         "C'est un plat Népalais"
       ],
-      correctAnswerIndex: "C'est un plat Vietnamien."
+      correct_answer: 2
     },
 
     {
@@ -60,7 +71,7 @@ export const culture_Quizz = {
         "Française",
         "Anglaise"
       ],
-      correctAnswerIndex: "Elle milite pour l'éducation des jeunes filles en astronomie."
+      correct_answer: 0
     },
 
     {
@@ -71,7 +82,7 @@ export const culture_Quizz = {
         "des Îles Marquises ",
         "de l'Archipel des Comores"
       ],
-      correctAnswerIndex: "des Îles du trapèze des Mascareignes"
+      correct_answer: 0
     },
 
     {
@@ -82,8 +93,20 @@ export const culture_Quizz = {
         "Sydney",
         "Canberra"
       ],
-      correctAnswerIndex: "Canberra"
+      correct_answer: 3
     },
+
+    {
+      question: "Où se situe la huitième merveille du monde ?",
+      options: [
+        "Au Mexique: Chichén Itzá",
+        "Au Cambodge: l'ensemble les temples d'Anghor",
+        "En Italie: le Colisée",
+        "Au Pérou: Le Machu Picchu"
+      ],
+      correct_answer: 1
+    },
+
     {
       question: "Quelle est le style littéraire de Molière ?",
       options: [
