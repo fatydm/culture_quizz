@@ -8,7 +8,7 @@ export const culture_Quizz = {
         "George Clooney.",
         "Jean Dujardin."
       ],
-      correct_answer: "George Clooney."
+      correctAnswerIndex: 2
     },
     {
       question: "Dans 'Le Comte de Monte-Cristo' d'Alexandre Dumas, quel est le nom de la prison où Edmond Dantès est emprisonné pendant 14 ans ?",
@@ -18,7 +18,7 @@ export const culture_Quizz = {
         "Fort Boyard.",
         "Mont Saint-Michel."
       ],
-      correct_answer: "Château d'If."
+      correctAnswerIndex: 0
     },
     {
       question: "Dans 'Prison Break', quel est le nom du personnage qui, avant de rejoindre les évadés, est un tueur à gages travaillant pour la mafia, et qui aide Michael Scofield et les autres à s'évader lors de la saison 1 ?",
@@ -28,7 +28,7 @@ export const culture_Quizz = {
         "Benjamin Miles Franklin",
         "James Whistler."
       ],
-      correct_answer: "John Abruzzi."
+      correctAnswerIndex: 0
     },
     {
       question: "Dans 'La Casa de Papel', quel est le véritable nom de l'homme qui se cache sous le masque de Salvador Dalí et qui porte le nom de 'Le Professeur' ?",
@@ -38,8 +38,19 @@ export const culture_Quizz = {
         "Rafael de la Mora",
         "James Whistler."
       ],
-      correct_answer: "Sergio Marquina."
+      correctAnswerIndex: 1
     },
+    {
+      question: "En quelle année est sorti le 1er 'Sister Act' avec Whoopi Goldberg",
+      options: [
+        "1982.",
+        "1988.",
+        "1992",
+        "1996."
+      ],
+      correctAnswerIndex: 2
+    },
+
 
     {
       question: "Quelle est l'origine du Bò bún ?",
