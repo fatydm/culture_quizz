@@ -11,7 +11,7 @@ const replayButton = document.getElementById('replay-button');
 function loadQuestion(index) {
     // Vider le conteneur des options
     options.innerHTML = '';
-
+    nextButton.style.display ="disabled";
     // Récupérer la question actuelle
     const currentQuestion = culture_Quizz.questions[index];
 
@@ -46,16 +46,17 @@ replayButton.addEventListener('click', () => {
     loadQuestion(currentQuestionIndex)
     nextButton.style.display = 'block';
     replayButton.style.display = 'none';
-})
 
+    // on appelle la fonction displayQuestion avec en argument la fonction réinitialisée
+    loadQuestion(currentQuestionIndex);
 
-options.addEventListener('click', (event) => {
-    const selectedAnswer = event.target.innerText; // Récupère la réponse cliquée
-    const currentQuestion = culture_Quizz.questions[currentQuestionIndex]; // Récupère la question en cours
-    const goodAnswer = currentQuestion.options[currentQuestion.correctAnswerIndex]; // Bonne réponse
+    nextButton.style.display = 'block';
 
-    function checkAnswer(selectedAnwser) {
+    
+});
 
+<<<<<<< HEAD
+=======
         if (selectedAnwser === goodAnswer) {
             options.innerHTML = ''
             questions.innerText = 'Bonne réponse'
@@ -66,3 +67,4 @@ options.addEventListener('click', (event) => {
     checkAnswer(selectedAnswer);
 
 })
+>>>>>>> 40ecf329cde75e204b68e5fa5c5dcd3441c4af92

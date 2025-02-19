@@ -148,6 +148,17 @@ export const culture_Quizz = {
       correctAnswerIndex: "Yasmina Khadra"
     },
     {
+      question: "Lequel de ces auteurs est une femme ?",
+      options: [
+        "Maxime Chattam",
+        "Fred Vargas",
+        "Arthur Conan Doyle",
+        "Franck Thilliez"
+      ],
+      correctAnswerIndex: 0
+    },
+    
+    {
       question: "Quel est la console la plus vendu de tous les temps ?",
       options: [
         "Gameboy",
