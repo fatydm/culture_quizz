@@ -113,7 +113,7 @@ export const culture_Quizz = {
         "Roman satyrique",
         "Roman comique"
       ],
-      correctAnswerIndex: "Théâtre"
+      correctAnswerIndex: 1
     },
     {
       question: "Combien de tomes comporte la série de livres Harry Potter ?",
@@ -123,7 +123,7 @@ export const culture_Quizz = {
         "7",
         "8"
       ],
-      correctAnswerIndex: "6"
+      correctAnswerIndex: 1
     },
     {
       question: "Le livre Le seigneur des anneaux est sorti durant quelle décennie ?",
@@ -133,7 +133,7 @@ export const culture_Quizz = {
         "1980",
         "1990"
       ],
-      correctAnswerIndex: "1950"
+      correctAnswerIndex: 0
     },
     {
       question: "Lequel de ces auteurs est un homme ?",
@@ -143,7 +143,7 @@ export const culture_Quizz = {
         "Laurell Hamilton",
         "Véronique Alunni"
       ],
-      correctAnswerIndex: "Yasmina Khadra"
+      correctAnswerIndex: 0
     },
     {
       question: "Lequel de ces auteurs est une femme ?",
@@ -153,7 +153,7 @@ export const culture_Quizz = {
         "Arthur Conan Doyle",
         "Franck Thilliez"
       ],
-      correctAnswerIndex: 0
+      correctAnswerIndex: 1
     },
     
     {
