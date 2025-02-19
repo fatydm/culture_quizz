@@ -42,5 +42,3 @@ nextButton.addEventListener("click", () => {
 });
 
 
-
-}) 
