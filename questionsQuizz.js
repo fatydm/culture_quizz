@@ -60,7 +60,7 @@ export const culture_Quizz = {
         "C'est un plat Vietnamien",
         "C'est un plat Népalais"
       ],
-      correct_answer: "C'est un plat Vietnamien."
+      correctAnswerIndex: 2
     },
 
     {
@@ -71,7 +71,7 @@ export const culture_Quizz = {
         "Française",
         "Anglaise"
       ],
-      correct_answer: "Elle milite pour l'éducation des jeunes filles en astronomie."
+      correctAnswerIndex: 0
     },
 
     {
@@ -82,7 +82,7 @@ export const culture_Quizz = {
         "des Îles Marquises ",
         "de l'Archipel des Comores"
       ],
-      correct_answer: "des Îles du trapèze des Mascareignes"
+      correctAnswerIndex: 0
     },
 
     {
@@ -93,8 +93,20 @@ export const culture_Quizz = {
         "Sydney",
         "Canberra"
       ],
-      correctAnswerIndex: "Canberra"
+      correctAnswerIndex: 3
     },
+
+    {
+      question: "Où se situe la huitième merveille du monde ?",
+      options: [
+        "Au Mexique: Chichén Itzá",
+        "Au Cambodge: l'ensemble les temples d'Anghor",
+        "En Italie: le Colisée",
+        "Au Pérou: Le Machu Picchu"
+      ],
+      correctAnswerIndex: 1
+    },
+
     {
       question: "Quelle est le style littéraire de Molière ?",
       options: [
@@ -103,7 +115,7 @@ export const culture_Quizz = {
         "Roman satyrique",
         "Roman comique"
       ],
-      correctAnswerIndex: 1
+      correctAnswerIndex: "Théâtre"
     },
     {
       question: "Combien de tomes comporte la série de livres Harry Potter ?",
@@ -113,7 +125,7 @@ export const culture_Quizz = {
         "7",
         "8"
       ],
-      correctAnswerIndex: 1
+      correctAnswerIndex: "6"
     },
     {
       question: "Le livre Le seigneur des anneaux est sorti durant quelle décennie ?",
@@ -123,7 +135,7 @@ export const culture_Quizz = {
         "1980",
         "1990"
       ],
-      correctAnswerIndex: 0
+      correctAnswerIndex: "1950"
     },
     {
       question: "Lequel de ces auteurs est un homme ?",
@@ -133,7 +145,7 @@ export const culture_Quizz = {
         "Laurell Hamilton",
         "Véronique Alunni"
       ],
-      correctAnswerIndex: 0
+      correctAnswerIndex: "Yasmina Khadra"
     },
     {
       question: "Lequel de ces auteurs est une femme ?",
@@ -154,7 +166,7 @@ export const culture_Quizz = {
         "Nitendo Switch",
         "Playstation 2"
       ],
-      correct_answer: "Playstation 2"
+      correctAnswerIndex: 3 
     },
     {
       question: "Quel est le jeux vidéos le plus vendu du monde ?",
@@ -164,7 +176,7 @@ export const culture_Quizz = {
         "Minecraft",
         "WII Sport"
       ],
-      correct_answer: "Minecraft"
+      correctAnswerIndex: 2 
     },
     {
       question: "Combien il y a t-il de classification pour les jeux vidéos ?",
@@ -174,7 +186,7 @@ export const culture_Quizz = {
         "6",
         "7"
       ],
-      correct_answer: "6 (3, 7, 12, 16 , 18 ans, ! = contrôle parental"
+      correctAnswerIndex: 2
     },
     {
       question: "A quel type de jeux appartient le jeux vidéo Call of Duty",
@@ -184,7 +196,7 @@ export const culture_Quizz = {
         "RTS (Real Time Strategy)",
         "MOBA (Multiplayer Online Battle arena)"
       ],
-      correct_answer: "FPS (Firts Person Shooter)"
+      correctAnswerIndex: 0
     },
 
     {
@@ -195,7 +207,7 @@ export const culture_Quizz = {
         "BlackBerry",
         "Nokia"
       ],
-      correct_answer: "Nokia"
+      correctAnswerIndex: 3
     },
   ]
 };
