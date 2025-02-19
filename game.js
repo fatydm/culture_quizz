@@ -11,7 +11,7 @@ const replayButton = document.getElementById('replay-button');
 function loadQuestion(index) {
     // Vider le conteneur des options
     options.innerHTML = '';
-    nextButton.style.display ="disabled";
+
     // Récupérer la question actuelle
     const currentQuestion = culture_Quizz.questions[index];
 
@@ -33,6 +33,7 @@ nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
         currentQuestionIndex++;
         loadQuestion(currentQuestionIndex)
+        nextButton.disabled = true;
     } else {
         questions.innerText = 'Fin du Quizz !';
         options.innerHTML = '';
@@ -43,17 +44,10 @@ nextButton.addEventListener("click", () => {
 
 replayButton.addEventListener('click', () => {
     currentQuestionIndex = 0
+    replayButton.style.display = 'none';
     loadQuestion(currentQuestionIndex)
     nextButton.style.display = 'block';
-    replayButton.style.display = 'none';
-
-    // on appelle la fonction displayQuestion avec en argument la fonction réinitialisée
-    loadQuestion(currentQuestionIndex);
-
-    nextButton.style.display = 'block';
-
-    
-});
+})
 
 options.addEventListener('click', (event) => {
     const selectedAnswer = event.target.innerText; // Récupère la réponse cliquée
@@ -64,11 +58,12 @@ options.addEventListener('click', (event) => {
 
         if (selectedAnwser === goodAnswer) {
             options.innerHTML = ''
-            questions.innerText = 'Bonne réponse'
+            questions.innerText = 'Bonne réponse boss 😎'
         } else if (selectedAnwser != goodAnswer) {
-           options.innerText = 'La bonne réponse est ' + ' ' + goodAnswer
+            options.innerHTML = ''
+            questions.innerText = 'Mauvaise réponse 🫣 La bonne réponse était ' + ' ' + goodAnswer
         }
     }
     checkAnswer(selectedAnswer);
-
+    nextButton.disabled = false;
 })

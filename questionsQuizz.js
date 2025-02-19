@@ -60,7 +60,6 @@ export const culture_Quizz = {
       ],
       correctAnswerIndex: 2
     },
-
     {
       question: "Quelle est l'origine du croissant ?",
       options: [
@@ -71,7 +70,6 @@ export const culture_Quizz = {
       ],
       correctAnswerIndex: 0
     },
-
     {
       question: "l'Île de Madagascar fait partie:",
       options: [
@@ -82,7 +80,6 @@ export const culture_Quizz = {
       ],
       correctAnswerIndex: 0
     },
-
     {
       question: "Quelle est la capitale de l'Australie ?",
       options: [
@@ -93,7 +90,6 @@ export const culture_Quizz = {
       ],
       correctAnswerIndex: 3
     },
-
     {
       question: "Où se situe la huitième merveille du monde ?",
       options: [
@@ -104,7 +100,6 @@ export const culture_Quizz = {
       ],
       correctAnswerIndex: 1
     },
-
     {
       question: "Quelle est le style littéraire de Molière ?",
       options: [
@@ -155,7 +150,6 @@ export const culture_Quizz = {
       ],
       correctAnswerIndex: 1
     },
-    
     {
       question: "Quel est la console la plus vendu de tous les temps ?",
       options: [
@@ -164,7 +158,7 @@ export const culture_Quizz = {
         "Nitendo Switch",
         "Playstation 2"
       ],
-      correctAnswerIndex: 3 
+      correctAnswerIndex: 3
     },
     {
       question: "Quel est le jeux vidéos le plus vendu du monde ?",
@@ -174,7 +168,7 @@ export const culture_Quizz = {
         "Minecraft",
         "WII Sport"
       ],
-      correctAnswerIndex: 2 
+      correctAnswerIndex: 2
     },
     {
       question: "Combien il y a t-il de classification pour les jeux vidéos ?",
@@ -196,9 +190,8 @@ export const culture_Quizz = {
       ],
       correctAnswerIndex: 0
     },
-
     {
-      question:"Quelle marque de téléphone a sorti le jeux Snake ? ",
+      question: "Quelle marque de téléphone a sorti le jeux Snake ? ",
       options: [
         "Samsung",
         "Iphone",
