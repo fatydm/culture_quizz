@@ -67,3 +67,5 @@ options.addEventListener('click', (event) => {
     checkAnswer(selectedAnswer);
     nextButton.disabled = false;
 })
+
+// on veut la suite du code
