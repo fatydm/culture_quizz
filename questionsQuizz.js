@@ -49,7 +49,7 @@ export const culture_Quizz = {
         "C'est un plat Vietnamien",
         "C'est un plat Népalais"
       ],
-      correct_answer: "C'est un plat Vietnamien."
+      correct_answer: 2
     },
 
     {
@@ -60,7 +60,7 @@ export const culture_Quizz = {
         "Française",
         "Anglaise"
       ],
-      correct_answer: "Elle milite pour l'éducation des jeunes filles en astronomie."
+      correct_answer: 0
     },
 
     {
@@ -71,7 +71,7 @@ export const culture_Quizz = {
         "des Îles Marquises ",
         "de l'Archipel des Comores"
       ],
-      correct_answer: "des Îles du trapèze des Mascareignes"
+      correct_answer: 0
     },
 
     {
@@ -82,8 +82,20 @@ export const culture_Quizz = {
         "Sydney",
         "Canberra"
       ],
-      correct_answer: "Canberra"
+      correct_answer: 3
     },
+
+    {
+      question: "Où se situe la huitième merveille du monde ?",
+      options: [
+        "Au Mexique: Chichén Itzá",
+        "Au Cambodge: l'ensemble les temples d'Anghor",
+        "En Italie: le Colisée",
+        "Au Pérou: Le Machu Picchu"
+      ],
+      correct_answer: 1
+    },
+
     {
       question: "Quelle est le style littéraire de Molière ?",
       options: [
