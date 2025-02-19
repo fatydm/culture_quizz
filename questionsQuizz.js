@@ -8,7 +8,7 @@ export const culture_Quizz = {
         "George Clooney.",
         "Jean Dujardin."
       ],
-      correct_answer: "George Clooney."
+      correctAnswerIndex: "George Clooney."
     },
     {
       question: "Dans 'Le Comte de Monte-Cristo' d'Alexandre Dumas, quel est le nom de la prison où Edmond Dantès est emprisonné pendant 14 ans ?",
@@ -18,7 +18,7 @@ export const culture_Quizz = {
         "Fort Boyard.",
         "Mont Saint-Michel."
       ],
-      correct_answer: "Château d'If."
+      correctAnswerIndex: "Château d'If."
     },
     {
       question: "Dans 'Prison Break', quel est le nom du personnage qui, avant de rejoindre les évadés, est un tueur à gages travaillant pour la mafia, et qui aide Michael Scofield et les autres à s'évader lors de la saison 1 ?",
@@ -28,7 +28,7 @@ export const culture_Quizz = {
         "Benjamin Miles Franklin",
         "James Whistler."
       ],
-      correct_answer: "John Abruzzi."
+      correctAnswerIndex: "John Abruzzi."
     },
     {
       question: "Dans 'La Casa de Papel', quel est le véritable nom de l'homme qui se cache sous le masque de Salvador Dalí et qui porte le nom de 'Le Professeur' ?",
@@ -38,7 +38,7 @@ export const culture_Quizz = {
         "Rafael de la Mora",
         "James Whistler."
       ],
-      correct_answer: "Sergio Marquina."
+      correctAnswerIndex: "Sergio Marquina."
     },
 
     {
@@ -49,7 +49,7 @@ export const culture_Quizz = {
         "C'est un plat Vietnamien",
         "C'est un plat Népalais"
       ],
-      correct_answer: "C'est un plat Vietnamien."
+      correctAnswerIndex: "C'est un plat Vietnamien."
     },
 
     {
@@ -60,7 +60,7 @@ export const culture_Quizz = {
         "Française",
         "Anglaise"
       ],
-      correct_answer: "Elle milite pour l'éducation des jeunes filles en astronomie."
+      correctAnswerIndex: "Elle milite pour l'éducation des jeunes filles en astronomie."
     },
 
     {
@@ -71,7 +71,7 @@ export const culture_Quizz = {
         "des Îles Marquises ",
         "de l'Archipel des Comores"
       ],
-      correct_answer: "des Îles du trapèze des Mascareignes"
+      correctAnswerIndex: "des Îles du trapèze des Mascareignes"
     },
 
     {
@@ -82,7 +82,7 @@ export const culture_Quizz = {
         "Sydney",
         "Canberra"
       ],
-      correct_answer: "Canberra"
+      correctAnswerIndex: "Canberra"
     },
     {
       question: "Quelle est le style littéraire de Molière ?",
@@ -92,7 +92,7 @@ export const culture_Quizz = {
         "Roman satyrique",
         "Roman comique"
       ],
-      correct_answer: "Théâtre"
+      correctAnswerIndex: "Théâtre"
     },
     {
       question: "Combien de tomes comporte la série de livres Harry Potter ?",
@@ -102,7 +102,7 @@ export const culture_Quizz = {
         "7",
         "8"
       ],
-      correct_answer: "6"
+      correctAnswerIndex: "6"
     },
     {
       question: "Le livre Le seigneur des anneaux est sorti durant quelle décennie ?",
@@ -112,7 +112,7 @@ export const culture_Quizz = {
         "1980",
         "1990"
       ],
-      correct_answer: "1950"
+      correctAnswerIndex: "1950"
     },
     {
       question: "Lequel de ces auteurs est un homme ?",
@@ -122,7 +122,7 @@ export const culture_Quizz = {
         "Laurell Hamilton",
         "Véronique Alunni"
       ],
-      correct_answer: "Yasmina Khadra"
+      correctAnswerIndex: "Yasmina Khadra"
     },
     {
       question: "Quel est la console la plus vendu de tous les temps ?",
@@ -132,7 +132,7 @@ export const culture_Quizz = {
         "Nitendo Switch",
         "Playstation 2"
       ],
-      correct_answer: "Playstation 2"
+      correctAnswerIndex: 3 
     },
     {
       question: "Quel est le jeux vidéos le plus vendu du monde ?",
@@ -142,7 +142,7 @@ export const culture_Quizz = {
         "Minecraft",
         "WII Sport"
       ],
-      correct_answer: "Minecraft"
+      correctAnswerIndex: 2 
     },
     {
       question: "Combien il y a t-il de classification pour les jeux vidéos ?",
@@ -152,7 +152,7 @@ export const culture_Quizz = {
         "6",
         "7"
       ],
-      correct_answer: "6 (3, 7, 12, 16 , 18 ans, ! = contrôle parental"
+      correctAnswerIndex: 2
     },
     {
       question: "A quel type de jeux appartient le jeux vidéo Call of Duty",
@@ -162,7 +162,7 @@ export const culture_Quizz = {
         "RTS (Real Time Strategy)",
         "MOBA (Multiplayer Online Battle arena)"
       ],
-      correct_answer: "FPS (Firts Person Shooter)"
+      correctAnswerIndex: 0
     },
 
     {
@@ -173,7 +173,7 @@ export const culture_Quizz = {
         "BlackBerry",
         "Nokia"
       ],
-      correct_answer: "Nokia"
+      correctAnswerIndex: 3
     },
   ]
 };
