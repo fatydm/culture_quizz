@@ -29,7 +29,12 @@ button {
     background-color: rgb(1, 1, 54);
     color: rgb(220, 227, 235);
     font-size: 1.3em;
+    font-family: 'Comic';
     height: 60px;
+}
+button:hover{
+    background-color: rgb(73, 54, 91);
+    color: white;
 }
 
 .button-container{
@@ -38,8 +43,11 @@ button {
     justify-content: flex-end;
 }
 
-#next-button:disabled {
-    opacity: 0.6;
+.disabled {
     cursor: not-allowed;
-  }
+}
+
+.disabled:hover{
+    opacity: 0.4;
+}
   
