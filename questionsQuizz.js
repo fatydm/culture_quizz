@@ -41,7 +41,7 @@ export const culture_Quizz = {
       correctAnswerIndex: 1
     },
     {
-      question: "En quelle année est sorti le 1er 'Sister Act' avec Whoopi Goldberg",
+      question: "En quelle année est sorti le 1er 'Sister Act' avec Whoopi Goldberg ?",
       options: [
         "1982.",
         "1988.",
@@ -50,8 +50,6 @@ export const culture_Quizz = {
       ],
       correctAnswerIndex: 2
     },
-
-
     {
       question: "Quelle est l'origine du Bò bún ?",
       options: [
