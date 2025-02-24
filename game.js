@@ -1,11 +1,16 @@
 import { culture_Quizz } from './questionsQuizz.js';
 
+// Etat du Quiz
 let currentQuestionIndex = 0;
-// Sélection des éléments HTML
+// La réponse choisie par le joueur
+let selectedOption = '';
+let score = 0;
+// Récupération des éléments HTML
 const questions = document.getElementById('question-text');
 const options = document.getElementById('options-container');
 const nextButton = document.getElementById('next-button');
 const replayButton = document.getElementById('replay-button');
+const submitButton = document.getElementById('check-button'); // HTML
 
 // Fonction pour afficher une question basée sur l'index actuel
 function loadQuestion(index) {
@@ -22,48 +27,89 @@ function loadQuestion(index) {
     currentQuestion.options.forEach(option => {
         const button = document.createElement('button');
         button.innerText = option;
-        button.classList.add('options-button');
+        button.onclick = () => selectedAnswer(button); // Nouveau
         options.appendChild(button);
     });
+
+        // On désactive le bouton "valider"
+        submitButton.disabled = true; 
+        // On cache les 3 boutons lors du chargement de la question
+        nextButton.style.display = 'none';
+        replayButton.style.display = 'none';
+        submitButton.style.display = 'none'; 
+
+
 }
 
-loadQuestion(currentQuestionIndex)
+loadQuestion(currentQuestionIndex);
 
-nextButton.addEventListener("click", () => {
-    if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
-        currentQuestionIndex++;
-        loadQuestion(currentQuestionIndex)
-        nextButton.disabled = true;
-    } else {
-        questions.innerText = 'Fin du Quizz !';
-        options.innerHTML = '';
-        nextButton.style.display = 'none';
-        replayButton.style.display = 'block';
-    }
+function selectedAnswer(button) {
+
+    selectedOption = button.innerText; // Récup
+
+    const allButtons = options.querySelectorAll('button');
+    allButtons.forEach(button => button.style.background = '');
+    allButtons.forEach(button => button.style.color = '');
+    allButtons.forEach(button => button.style.fontWeight = '');
+    allButtons.forEach(button => button.style.border = '');
+
+    // Changement de style lors du choix de la réponse (du clic)
+    button.style.background ='rgb(218, 140, 33)';
+    button.style.color = 'black';
+    button.style.fontWeight = 'bold';
+    button.style.borderColor = 'black'
+
+    submitButton.style.display = 'block';
+
+    submitButton.disabled = false;
+
+};
+
+submitButton.addEventListener('click', () => {
+
+    const goodAnswer = culture_Quizz.questions[currentQuestionIndex].correctAnswer;
+    const justification = culture_Quizz.questions[currentQuestionIndex].justification;
+
+        if (selectedOption === goodAnswer) {
+            questions.innerText = 'Bonne réponse boss 😎';
+            options.innerHTML = '' + justification;
+            score++
+            
+        } else {
+            questions.innerText = 'Mauvaise réponse 🫣';
+            options.innerHTML =  'La bonne réponse était ' + ' ' + goodAnswer + '<br>' + justification // utilisation backticks
+        }
+
+    nextButton.style.display = 'block';
+    submitButton.style.visibility = 'hidden';
+
 });
 
+
+// bouton suivant
+ nextButton.addEventListener("click", () => {
+
+     if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+
+    } else {
+        questions.innerText = 'Fin du Quizz !';
+        options.innerHTML = 'Ton score est de ' + score;
+        nextButton.style.display = 'none';
+        replayButton.style.display = 'block';
+        submitButton.style.display = 'none';
+    }
+
+    submitButton.style.visibility = 'visible';
+});
+
+
+ // bouton rejouer
 replayButton.addEventListener('click', () => {
     currentQuestionIndex = 0
     loadQuestion(currentQuestionIndex)
-    nextButton.style.display = 'block';
-    replayButton.style.display = 'none';
-})
-
-
-options.addEventListener('click', (event) => {
-    const selectedAnswer = event.target.innerText; // Récupère la réponse cliquée
-    const currentQuestion = culture_Quizz.questions[currentQuestionIndex]; // Récupère la question en cours
-    const goodAnswer = currentQuestion.options[currentQuestion.correctAnswerIndex]; // Bonne réponse
-
-    function checkAnswer(selectedAnwser) {
-
-        if (selectedAnwser === goodAnswer) {
-            options.innerHTML = ''
-            questions.innerText = 'Bonne réponse'
-        } else if (selectedAnwser != goodAnswer) {
-           options.innerText = 'La bonne réponse est ' + ' ' + goodAnswer
-        }
-    }
-    checkAnswer(selectedAnswer);
+    nextButton.style.display = 'none';
 
 })
+

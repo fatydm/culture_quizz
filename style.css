@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap');
 
+
+body {
+    background: linear-gradient(rgb(152, 94, 152), rgb(125, 152, 179));
+    background-repeat: no-repeat;
+}
 #quiz-container {
     margin: 20px;
     padding: 20px;
-    background: linear-gradient(rgb(152, 94, 152), rgb(125, 152, 179));
-}
+} 
 
 .question {
-    font-size: 2em;
+    font-size: 4em;
     font-family: 'Phudu';
+    font-weight: 600;
     text-align: center;
     padding: 10px;
     margin: 20px;
@@ -18,7 +23,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    font-size: 15px;
+    font-size: 30px;
 }
 
 button {
@@ -29,12 +34,15 @@ button {
     background-color: rgb(1, 1, 54);
     color: rgb(220, 227, 235);
     font-size: 1.3em;
-    font-family: 'Comic';
-    height: 60px;
+    font-family: 'Phudu';
+    font-weight: 600;
+    height: 100px;
 }
 button:hover{
     background-color: rgb(73, 54, 91);
     color: white;
+    transition: background-color 0.4s ease;
+    font-size: 50px;
 }
 
 .button-container{
@@ -43,11 +51,4 @@ button:hover{
     justify-content: flex-end;
 }
 
-.disabled {
-    cursor: not-allowed;
-}
-
-.disabled:hover{
-    opacity: 0.4;
-}
   
