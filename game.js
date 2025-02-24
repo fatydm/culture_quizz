@@ -125,7 +125,6 @@ submitButton.addEventListener('click', () => {
  // bouton rejouer
 replayButton.addEventListener('click', () => {
     currentQuestionIndex = 0
-    replayButton.style.display = 'none';
     loadQuestion(currentQuestionIndex)
     nextButton.style.display = 'none';
 
