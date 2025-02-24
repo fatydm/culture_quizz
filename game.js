@@ -28,7 +28,7 @@ function loadQuestion(index) {
 }
 
 loadQuestion(currentQuestionIndex)
-
+nextButton.disabled = true;
 nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
         currentQuestionIndex++;
