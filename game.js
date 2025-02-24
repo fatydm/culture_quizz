@@ -55,7 +55,6 @@ function loadQuestion(index) {
         nextButton.style.display = 'none';
         replayButton.style.display = 'none';
         submitButton.style.display = 'none'; 
-
 }
 
 loadQuestion(currentQuestionIndex);
