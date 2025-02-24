@@ -12,8 +12,26 @@ const nextButton = document.getElementById('next-button');
 const replayButton = document.getElementById('replay-button');
 const submitButton = document.getElementById('check-button'); // HTML
 
+// Pour le timer
+const timer = document.getElementById('timer');
+let time = 15;
+timer.innerText='15';
+
+function reduceTime() {
+    let seconds = parseInt(time % 60, 10);
+
+    timer.innerText = seconds;
+    time--
+
+    time = time <= 0 ? 0 : time -1 +1 // sucre syntaxtique
+} 
+
+
+
 // Fonction pour afficher une question basée sur l'index actuel
 function loadQuestion(index) {
+    setInterval(reduceTime, 1000)
+
     // Vider le conteneur des options
     options.innerHTML = '';
 
@@ -37,7 +55,6 @@ function loadQuestion(index) {
         nextButton.style.display = 'none';
         replayButton.style.display = 'none';
         submitButton.style.display = 'none'; 
-
 
 }
 
@@ -113,4 +130,7 @@ replayButton.addEventListener('click', () => {
     nextButton.style.display = 'none';
 
 })
+
+
+
 

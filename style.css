@@ -5,6 +5,20 @@ body {
     background: linear-gradient(rgb(152, 94, 152), rgb(125, 152, 179));
     background-repeat: no-repeat;
 }
+
+#timer{
+    border: 10px solid rgb(57, 25, 57);
+    border-radius: 40%;
+    width: 20px;
+    padding: 30px;
+    margin: 20px;
+    font-size: 40px;
+    font-family: 'Phudu';
+    display: flex;
+    justify-content: center;
+
+}
+
 #quiz-container {
     margin: 20px;
     padding: 20px;
