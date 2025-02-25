@@ -12,20 +12,42 @@ const nextButton = document.getElementById('next-button');
 const replayButton = document.getElementById('replay-button');
 const submitButton = document.getElementById('check-button'); // HTML
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Pour le timer
 const timer = document.getElementById('timer');
 let time = 15;
-timer.innerText='15';
+timer.innerText = '15';
 
 function reduceTime() {
+
+    clearInterval(reduceTime)
+
     let seconds = parseInt(time % 60, 10);
 
     timer.innerText = seconds;
     time--
 
-    time = time <= 0 ? 0 : time -1 +1 // sucre syntaxtique
-} 
-setInterval(reduceTime, 1000)
+    time = time <= 0 ? 0 : time - 1 + 1 // sucre syntaxtique 
+}
+
+
+
+// Si temps écoulé, on affiche la bonne réponse
+setTimeout(() => {
+    questions.innerText = 'Temps écoulé 😕 !';
+    options.innerHTML = 'La bonne réponse était ' + culture_Quizz.questions[currentQuestionIndex].correctAnswer + '<br>' + culture_Quizz.questions[currentQuestionIndex].justification;
+    nextButton.style.display = 'block';
+    submitButton.style.display = 'none';
+    timer.style.display = 'none';
+}
+    , 15000);
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -49,15 +71,23 @@ function loadQuestion(index) {
         options.appendChild(button);
     });
 
-        // On désactive le bouton "valider"
-        submitButton.disabled = true; 
-        // On cache les 3 boutons lors du chargement de la question
-        nextButton.style.display = 'none';
-        replayButton.style.display = 'none';
-        submitButton.style.display = 'none'; 
+    // On désactive le bouton "valider"
+    submitButton.disabled = true;
+    // On cache les 3 boutons lors du chargement de la question
+    nextButton.style.display = 'none';
+    replayButton.style.display = 'none';
+    submitButton.style.display = 'none';
+    setInterval(reduceTime, 1000)
 }
 
 loadQuestion(currentQuestionIndex);
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 function selectedAnswer(button) {
 
@@ -70,7 +100,7 @@ function selectedAnswer(button) {
     allButtons.forEach(button => button.style.border = '');
 
     // Changement de style lors du choix de la réponse (du clic)
-    button.style.background ='rgb(218, 140, 33)';
+    button.style.background = 'rgb(218, 140, 33)';
     button.style.color = 'black';
     button.style.fontWeight = 'bold';
     button.style.borderColor = 'black'
@@ -81,39 +111,53 @@ function selectedAnswer(button) {
 
 };
 
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// bouton valider
 submitButton.addEventListener('click', () => {
 
     const goodAnswer = culture_Quizz.questions[currentQuestionIndex].correctAnswer;
     const justification = culture_Quizz.questions[currentQuestionIndex].justification;
 
-        if (selectedOption === goodAnswer) {
-            questions.innerText = 'Bonne réponse boss 😎';
-            options.innerHTML = '' + justification;
-            score++
+    if (selectedOption === goodAnswer) {
+        questions.innerText = 'Bonne réponse boss 😎';
+        options.innerHTML = '' + justification;
+        score++
 
-            confetti({
-                particleCount: 250,
-                spread: 100,
-                origin: { y: 0.6 }
-            });
-            
-        } else {
-            questions.innerText = 'Mauvaise réponse 🫣';
-            options.innerHTML =  'La bonne réponse était ' + ' ' + goodAnswer + '<br>' + justification // utilisation backticks
-        }
+        confetti({
+            particleCount: 250,
+            spread: 100,
+            origin: { y: 0.6 }
+        });
+
+    } else {
+        questions.innerText = 'Mauvaise réponse 🫣';
+        options.innerHTML = 'La bonne réponse était ' + ' ' + goodAnswer + '<br>' + justification // utilisation backticks
+    }
 
     nextButton.style.display = 'block';
     submitButton.style.visibility = 'hidden';
-
+    timer.style.display = 'none';
 });
 
 
 // bouton suivant
- nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click", () => {
 
-     if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
+    if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
         currentQuestionIndex++;
         loadQuestion(currentQuestionIndex);
+        reduceTime();
+        timer.style.display = 'block';
 
     } else {
         questions.innerText = 'Fin du Quizz !';
@@ -121,18 +165,23 @@ submitButton.addEventListener('click', () => {
         nextButton.style.display = 'none';
         replayButton.style.display = 'block';
         submitButton.style.display = 'none';
+        timer.style.display = 'none';
+
     }
 
     submitButton.style.visibility = 'visible';
+    
+    
+
 });
 
 
- // bouton rejouer
+// bouton rejouer
 replayButton.addEventListener('click', () => {
     currentQuestionIndex = 0
     loadQuestion(currentQuestionIndex)
     nextButton.style.display = 'none';
-
+    timer.style.display = 'none'
 })
 
 
