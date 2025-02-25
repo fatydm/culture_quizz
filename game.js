@@ -27,7 +27,6 @@ function reduceTime() {
 } 
 
 
-
 // Fonction pour afficher une question basée sur l'index actuel
 function loadQuestion(index) {
     setInterval(reduceTime, 1000)
