@@ -31,13 +31,14 @@ p{
 #timer{
     border: 10px solid rgb(57, 25, 57);
     border-radius: 40%;
-    width: 20px;
-    padding: 30px;
+    width: 10px;
+    padding: 20px;
     margin: 20px;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Phudu';
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #quiz-container {
