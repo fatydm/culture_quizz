@@ -4,15 +4,19 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     border: 10px solid rgb(57, 25, 57);
-    padding: 30px;
+    padding: 10px;
 }
 
 h1{
-    font-size: 5em;
+    font-size: 4.3em;
+}
+.img_culture_quizz{
+    border: 5px solid rgb(57, 25, 57);
+    border-radius: 20%;
 }
 
 p{
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .p_attention{

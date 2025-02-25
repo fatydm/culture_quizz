@@ -25,11 +25,12 @@ function reduceTime() {
 
     time = time <= 0 ? 0 : time -1 +1 // sucre syntaxtique
 } 
+setInterval(reduceTime, 1000)
+
 
 
 // Fonction pour afficher une question basée sur l'index actuel
 function loadQuestion(index) {
-    setInterval(reduceTime, 1000)
 
     // Vider le conteneur des options
     options.innerHTML = '';
@@ -116,7 +117,7 @@ submitButton.addEventListener('click', () => {
 
     } else {
         questions.innerText = 'Fin du Quizz !';
-        options.innerHTML = 'Ton score est de ' + score;
+        options.innerHTML = 'Ton score est de ' + score / culture_Quizz.questions.length * 100 + '%';
         nextButton.style.display = 'none';
         replayButton.style.display = 'block';
         submitButton.style.display = 'none';
