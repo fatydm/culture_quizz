@@ -8,6 +8,7 @@ body {
     text-align: center;
     border: 10px solid rgb(57, 25, 57);
     padding: 30px;
+    height: 100vh;
 }
 
 .back{

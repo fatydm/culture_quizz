@@ -15,45 +15,47 @@ const submitButton = document.getElementById('check-button'); // HTML
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Pour le timer
-const timer = document.getElementById('timer');
+let timer = document.getElementById('timer');
 let time = 15;
+//let countInterval = 1; // variable pour stocker l'intervalle
 timer.innerText = '15';
 
 function reduceTime() {
-
-    clearInterval(reduceTime)
-
     let seconds = parseInt(time % 60, 10);
-
     timer.innerText = seconds;
-    time--
 
-    time = time <= 0 ? 0 : time - 1 + 1 // sucre syntaxtique 
+    time = time > 0 ? time - 1 : 0; // sucre syntaxtique 
+
+    if (time === 0) {
+        //clearInterval(countInterval); // Stop le timer quand il atteint 0
+        endOfTime(); // Appelle la fonction quand le temps est écoulé
+    }
 }
+setInterval(reduceTime, 1000);
 
-
-
-// Si temps écoulé, on affiche la bonne réponse
-setTimeout(() => {
+// Si temps écoulé, on affiche la bonne réponse et la justification et on cache les boutons
+function endOfTime() {
     questions.innerText = 'Temps écoulé 😕 !';
     options.innerHTML = 'La bonne réponse était ' + culture_Quizz.questions[currentQuestionIndex].correctAnswer + '<br>' + culture_Quizz.questions[currentQuestionIndex].justification;
     nextButton.style.display = 'block';
     submitButton.style.display = 'none';
     timer.style.display = 'none';
-}
-    , 15000);
+};
 
 
 
+// Fonction pour réinitialiser le timer à chaque nouvelle question
+function startTimer() {
+    //clearInterval(countInterval);
+
+    time = 15;
+    timer.style.display = "block";
+    timer.innerText = "15";
+};
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function updateTime () {
-    time = 15;
-    timer.style.display = "block";
-    timer.innerText="15";
-}
 
 // Fonction pour afficher une question basée sur l'index actuel
 function loadQuestion(index) {
@@ -81,7 +83,6 @@ function loadQuestion(index) {
     nextButton.style.display = 'none';
     replayButton.style.display = 'none';
     submitButton.style.display = 'none';
-    setInterval(reduceTime, 1000)
 }
 
 loadQuestion(currentQuestionIndex);
@@ -91,6 +92,8 @@ loadQuestion(currentQuestionIndex);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 function selectedAnswer(button) {
@@ -118,10 +121,7 @@ function selectedAnswer(button) {
 
 
 
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 
 
@@ -137,16 +137,16 @@ submitButton.addEventListener('click', () => {
         options.innerHTML = '' + justification;
         score++
 
-            confetti({
-                particleCount: 250,
-                spread: 100,
-                origin: { y: 0.6 }
-            });
-            
-        } else {
-            questions.innerText = 'Mauvaise réponse 🫣';
-            options.innerHTML =  'La bonne réponse était ' + ' ' + goodAnswer + '<br>' + justification // utilisation backticks
-        }
+        confetti({
+            particleCount: 250,
+            spread: 100,
+            origin: { y: 0.6 }
+        });
+
+    } else {
+        questions.innerText = 'Mauvaise réponse 🫣';
+        options.innerHTML = 'La bonne réponse était ' + ' ' + goodAnswer + '<br>' + justification // utilisation backticks
+    }
 
     nextButton.style.display = 'block';
     submitButton.style.visibility = 'hidden';
@@ -155,32 +155,31 @@ submitButton.addEventListener('click', () => {
 
 
 // bouton suivant
- nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click", () => {
 
     if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
         currentQuestionIndex++;
         loadQuestion(currentQuestionIndex);
-        reduceTime();
+        startTimer();
         timer.style.display = 'block';
 
     } else {
         questions.innerText = 'Fin du Quizz !';
-        options.innerHTML = 'Ton score est de ' + score / culture_Quizz.questions.length * 100 + '%';
+        options.innerHTML = 'Ton score est de ' + score + "/" + culture_Quizz.questions.length;
         nextButton.style.display = 'none';
         replayButton.style.display = 'block';
         submitButton.style.display = 'none';
     }
 
     submitButton.style.visibility = 'visible';
-    
-    
+
+
 
 });
 
 
 // bouton rejouer
 replayButton.addEventListener('click', () => {
-    updateTime ();
     currentQuestionIndex = 0
     loadQuestion(currentQuestionIndex)
     nextButton.style.display = 'none';

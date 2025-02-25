@@ -8,7 +8,7 @@ export const culture_Quizz = {
         "George Clooney.",
         "Jean Dujardin."
       ],
-      correctAnswer:  "George Clooney.",
+      correctAnswer: "George Clooney.",
       justification: "Il s'est fait connaître dans les années 1990 grâce à son rôle du docteur Doug Ross dans la série médicale Urgences (ER en version originale). Ce rôle a lancé sa carrière internationale et lui a ouvert les portes du cinéma hollywoodien."
     },
     {
@@ -22,18 +22,18 @@ export const culture_Quizz = {
       correctAnswer: "Château d'If.",
       justification: "Edmond Dantès est emprisonné pendant 14 ans dans le château d'If, une forteresse située sur une île au large de Marseille."
     },
-    // {
-    //   question: "Dans 'Prison Break', quel est le nom du personnage qui, avant de rejoindre les évadés, est un tueur à gages travaillant pour la mafia, et qui aide Michael Scofield et les autres à s'évader lors de la saison 1 ?",
-    //   options: [
-    //     "John Abruzzi.",
-    //     "Theodore 'T-Bag' Bagwell.",
-    //     "Benjamin Miles Franklin",
-    //     "James Whistler."
-    //   ],
-    //   correctAnswer: "John Abruzzi.",
-    //   justification: "Interprété par Peter Stormare, Abruzzi est un chef mafieux influent incarcéré à Fox River et joue un rôle clé dans l'évasion en fournissant des ressources et des contacts essentiels à Michael Scofield et aux autres évadés."
+    {
+      question: "Dans 'Prison Break', quel est le nom du personnage qui, avant de rejoindre les évadés, est un tueur à gages travaillant pour la mafia, et qui aide Michael Scofield et les autres à s'évader lors de la saison 1 ?",
+      options: [
+        "John Abruzzi.",
+        "Theodore 'T-Bag' Bagwell.",
+        "Benjamin Miles Franklin",
+        "James Whistler."
+      ],
+      correctAnswer: "John Abruzzi.",
+      justification: "Interprété par Peter Stormare, Abruzzi est un chef mafieux influent incarcéré à Fox River et joue un rôle clé dans l'évasion en fournissant des ressources et des contacts essentiels à Michael Scofield et aux autres évadés."
 
-    // },
+    },
     // {
     //   question: "Dans 'La Casa de Papel', quel est le véritable nom de l'homme qui se cache sous le masque de Salvador Dalí et qui porte le nom de 'Le Professeur' ?",
     //   options: [

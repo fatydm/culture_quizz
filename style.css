@@ -5,6 +5,7 @@ body{
     text-align: center;
     border: 10px solid rgb(57, 25, 57);
     padding: 10px;
+    height: 100vh;
 }
 
 h1{
