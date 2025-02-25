@@ -24,10 +24,15 @@ function reduceTime() {
     time--
 
     time = time <= 0 ? 0 : time -1 +1 // sucre syntaxtique
+    clearInterval(time);
 } 
 setInterval(reduceTime, 1000)
 
-
+function updateTime () {
+    time = 15;
+    timer.style.display = "block";
+    timer.innerText="15";
+}
 
 // Fonction pour afficher une question basée sur l'index actuel
 function loadQuestion(index) {
@@ -101,7 +106,7 @@ submitButton.addEventListener('click', () => {
             questions.innerText = 'Mauvaise réponse 🫣';
             options.innerHTML =  'La bonne réponse était ' + ' ' + goodAnswer + '<br>' + justification // utilisation backticks
         }
-
+        timer.style.display = "none"
     nextButton.style.display = 'block';
     submitButton.style.visibility = 'hidden';
 
@@ -110,6 +115,11 @@ submitButton.addEventListener('click', () => {
 
 // bouton suivant
  nextButton.addEventListener("click", () => {
+    
+    //  time = 15;
+    //  timer.style.display = "block";
+    //  timer.innerText="15";
+    updateTime ()
 
      if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
         currentQuestionIndex++;
@@ -121,6 +131,7 @@ submitButton.addEventListener('click', () => {
         nextButton.style.display = 'none';
         replayButton.style.display = 'block';
         submitButton.style.display = 'none';
+        timer.style.display = "none";
     }
 
     submitButton.style.visibility = 'visible';
@@ -129,6 +140,7 @@ submitButton.addEventListener('click', () => {
 
  // bouton rejouer
 replayButton.addEventListener('click', () => {
+    updateTime ();
     currentQuestionIndex = 0
     loadQuestion(currentQuestionIndex)
     nextButton.style.display = 'none';
