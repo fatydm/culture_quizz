@@ -88,12 +88,7 @@ function loadQuestion(index) {
 loadQuestion(currentQuestionIndex);
 
 
-
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 function selectedAnswer(button) {
@@ -119,11 +114,7 @@ function selectedAnswer(button) {
 };
 
 
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 // bouton valider
@@ -172,9 +163,6 @@ nextButton.addEventListener("click", () => {
     }
 
     submitButton.style.visibility = 'visible';
-
-
-
 });
 
 
