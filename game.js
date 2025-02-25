@@ -160,7 +160,7 @@ submitButton.addEventListener('click', () => {
     if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
         currentQuestionIndex++;
         loadQuestion(currentQuestionIndex);
-        reduceTime();
+        updateTimeTime();
         timer.style.display = 'block';
 
     } else {
