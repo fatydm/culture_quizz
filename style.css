@@ -1,80 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap');
-
-
-body {
+body{
     background: linear-gradient(rgb(152, 94, 152), rgb(125, 152, 179));
     background-repeat: no-repeat;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-}
-h1{
-    font-size: 5em;
+    border: 10px solid rgb(57, 25, 57);
+    padding: 30px;
 }
 
-.demarrer_button{
-font-size: 1em;
+h1{
+    font-size: 5em;
 }
 
 p{
     font-size: 2em;
 }
-#timer{
-    border: 10px solid rgb(57, 25, 57);
-    border-radius: 40%;
-    width: 20px;
-    padding: 30px;
-    margin: 20px;
-    font-size: 40px;
-    font-family: 'Phudu';
-    display: flex;
-    justify-content: center;
 
+.p_attention{
+    font-size: 1em;
+    color: purple;
 }
 
-#quiz-container {
-    margin: 20px;
-    padding: 20px;
-} 
-
-.question {
-    font-size: 4em;
-    font-family: 'Phudu';
-    font-weight: 600;
-    text-align: center;
-    padding: 10px;
-    margin: 20px;
+.demarrer_button{
+    text-decoration: none;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 30px;
-}
-
-button {
-    border-radius: 20px;
-    border: 4px solid rgb(193, 187, 100);
-    height: 40px;
-    margin-bottom: 20px;
-    background-color: rgb(1, 1, 54);
+.demarrer_button:hover{
+    background-color: rgb(143, 50, 131);
     color: rgb(220, 227, 235);
-    font-size: 1.3em;
-    font-family: 'Phudu';
-    font-weight: 600;
-    height: 100px;
 }
-button:hover{
-    background-color: rgb(73, 54, 91);
-    color: white;
-    transition: background-color 0.4s ease;
-    font-size: 50px;
-}
-
-.button-container{
-    margin: 10px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-  
