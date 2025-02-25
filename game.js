@@ -89,6 +89,12 @@ submitButton.addEventListener('click', () => {
             questions.innerText = 'Bonne réponse boss 😎';
             options.innerHTML = '' + justification;
             score++
+
+            confetti({
+                particleCount: 250,
+                spread: 100,
+                origin: { y: 0.6 }
+            });
             
         } else {
             questions.innerText = 'Mauvaise réponse 🫣';
