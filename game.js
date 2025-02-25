@@ -160,7 +160,8 @@ submitButton.addEventListener('click', () => {
     if (currentQuestionIndex < culture_Quizz.questions.length - 1) {
         currentQuestionIndex++;
         loadQuestion(currentQuestionIndex);
-        updateTimeTime();
+        updateTime();
+        console.log("toto");
         timer.style.display = 'block';
 
     } else {
