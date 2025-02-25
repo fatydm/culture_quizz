@@ -61,6 +61,10 @@ p{
     font-size: 30px;
 }
 
+.noTransition {
+    transition: none;
+}
+
 button {
     border-radius: 20px;
     border: 4px solid rgb(193, 187, 100);
