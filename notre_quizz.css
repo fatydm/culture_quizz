@@ -76,7 +76,7 @@ button {
 button:hover{
     background-color: rgb(73, 54, 91);
     color: white;
-    transition: background-color 0.4s ease;
+    transition: all 0.4s ease-out;
     font-size: 40px;
 }
 
