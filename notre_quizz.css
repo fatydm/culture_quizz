@@ -72,11 +72,11 @@ button {
     font-family: 'Phudu';
     font-weight: 600;
     height: 100px;
+    transition: all 0.4s ease-in-out;
 }
 button:hover{
     background-color: rgb(73, 54, 91);
     color: white;
-    transition: all 0.4s ease-out;
     font-size: 40px;
 }
 
