@@ -1,10 +1,3 @@
-/* Remettre à zéro les marges */
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } */
-
 body{
     background: linear-gradient(rgb(152, 94, 152), rgb(125, 152, 179));
     background-repeat: no-repeat;
@@ -34,9 +27,9 @@ p{
 }
 
 .p_attention{
-    font-size: 1em;
+    font-size: 0.7em;
     color: purple;
-    margin-top: 5%;
+    margin-top: 10px;
 }
 
 .demarrer_button{

@@ -25,7 +25,7 @@ timer.innerText = '15';
 // Fonction pour démarrer le timer
 function startTimer() {
     clearInterval(countdownInterval); // Supprime tout timer existant
-    time = 5;
+    time = 15;
     timer.innerText = time;
     timer.style.display = "block";
 
