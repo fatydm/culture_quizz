@@ -29,7 +29,24 @@ function hideProgressBar() {
 function showProgressBar() {
     document.getElementById('progressBar').style.display = 'inline-block';
 }
-
+function hideNextButton() {
+    document.getElementById('next-button').style.display = 'none';
+}
+function showNextButton() {
+    document.getElementById('next-button').style.display = 'block'
+}
+function hideSubmitButton() {
+    document.getElementById('next-button').style.display = 'none'
+}
+function showSubmitButton() {
+    document.getElementById('next-button').style.display = 'block'
+}
+function hideTimer() {
+    document.getElementById('next-button').style.display = 'none'
+}
+function showTimer(){
+document.getElementById('next-button').style.display = 'none'
+}
 
 // SECTION POUR LE TIMER
 // Pour le timer
@@ -42,7 +59,7 @@ function startTimer() {
     let time;
 
     clearInterval(countdownInterval); // Supprime tout timer existant
-    time = 90;
+    time = 15;
     timer.innerText = time;
     timer.style.display = "block";
 
@@ -88,7 +105,6 @@ function endOfTime() {
     timer.style.display = 'none';
     hideProgressBar();
 };
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // FONCTION POUR GÉNÉRER LES QUESTIONS
@@ -189,7 +205,7 @@ submitButton.addEventListener('click', () => {
         questions.innerText = 'Bonne réponse boss 😎';
         options.innerText = '';
 
-        correctAnswerText.innerText = 'La bonne réponse était :' + ' ' + goodAnswer;
+        correctAnswerText.innerText = 'La bonne réponse était bien :' + ' ' + goodAnswer;
         justificationText.innerText = justification;
 
         options.appendChild(correctAnswerText);
@@ -228,7 +244,7 @@ submitButton.addEventListener('click', () => {
     }
 
     // timerActive = false;
-    nextButton.style.display = 'block';
+    nextButton.style.display = 'inline-block';
     submitButton.style.visibility = 'hidden';
     timer.style.display = 'none';
     hideProgressBar();
@@ -251,7 +267,6 @@ nextButton.addEventListener("click", () => {
         replayButton.style.display = 'block';
         submitButton.style.display = 'none';
     }
-    console.log(currentQuestionIndex);
     submitButton.style.visibility = 'visible';
 
     confetti.reset();
@@ -261,13 +276,17 @@ nextButton.addEventListener("click", () => {
 
 // bouton rejouer
 replayButton.addEventListener('click', () => {
+
     shuffle(questions)
+
     currentQuestionIndex = 0
     score = 0;
+
     loadQuestion(currentQuestionIndex)
+
     nextButton.style.display = 'none';
     timer.style.display = 'block'
-    progressionbar.value = 0
+    progressBar.value = 0
 })
 
 // Pour mélanger les questions aux prochaines parties
@@ -280,7 +299,8 @@ function progression () {
     const progressBar = document.getElementById('progressBar')
     progressBar.max = culture_Quizz.questions.length;
     progressBar.value = currentQuestionIndex
-    }
+}
+
 
 
 

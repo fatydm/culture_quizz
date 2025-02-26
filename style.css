@@ -5,7 +5,7 @@ body{
     text-align: center;
     border: 10px solid rgb(57, 25, 57);
     padding: 10px;
-    /* overflow: hidden; Empêche le scroll */
+    overflow: hidden; /* Empêche le scroll */
     font-family: 'Phudu';
     height: 100vh; 
     margin: 0;

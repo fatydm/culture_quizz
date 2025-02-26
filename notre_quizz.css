@@ -10,7 +10,7 @@ body {
     height: 100%;
     background-attachment: fixed;
     margin: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 /* .border {
@@ -38,13 +38,14 @@ body {
 }
 
 #timer {
-    border: 10px solid rgb(57, 25, 57);
-    border-radius: 40%;
+    /* border: 10px solid rgb(57, 25, 57);
+    border-radius: 40%; */
     width: 10px;
     height: 10px;
     padding: 15px;
     margin: 15px;
-    font-size: 20px;
+    font-size: 3em;
+    font-weight: 600;
     font-family: 'Phudu';
     color: rgb(57, 25, 57);
 }
@@ -78,6 +79,8 @@ body {
 
 .noTransition {
     transition: none;
+    height: 50px;
+    width: 120px;
 }
 
 button {
@@ -110,8 +113,8 @@ button:hover {
 .answer-img {
     margin-top: 20px;
     object-fit: cover;
-    width: 350px;
+    width: 550px;
     border: 5px solid rgb(57, 25, 57);
     border-radius: 20px;
-    margin-left: calc(50% - 200px);
+    margin-left: calc(50% - 280px);
 }

@@ -3,60 +3,60 @@ export const culture_Quizz = {
     {
       question: "Quel célèbre acteur s'est fait connaitre dans les années 1990 dans la série médicale Urgences ?",
       options: [
-        "Sean Penn.",
-        "Pierce Brosman.",
-        "George Clooney.",
-        "Jean Dujardin."
+        "Sean Penn",
+        "Pierce Brosman",
+        "George Clooney",
+        "Jean Dujardin"
       ],
-      correctAnswer: "George Clooney.",
+      correctAnswer: "George Clooney",
       justification: "Il s'est fait connaître dans les années 1990 grâce à son rôle du docteur Doug Ross dans la série médicale Urgences (ER en version originale). Ce rôle a lancé sa carrière internationale et lui a ouvert les portes du cinéma hollywoodien.",
       image: "./img/george_clooney.webp"
     },
     {
       question: "Dans 'Le Comte de Monte-Cristo' d'Alexandre Dumas, quel est le nom de la prison où Edmond Dantès est emprisonné pendant 14 ans ?",
       options: [
-        "Château d'If.",
-        "La Bastille.",
-        "Fort Boyard.",
-        "Mont Saint-Michel."
+        "Château d'If",
+        "La Bastille",
+        "Fort Boyard",
+        "Mont Saint-Michel"
       ],
-      correctAnswer: "Château d'If.",
+      correctAnswer: "Château d'If",
       justification: "Edmond Dantès est emprisonné pendant 14 ans dans le château d'If, une forteresse située sur une île au large de Marseille.",
       image: "./img/chateau-if-marseille.jpg"
     },
     {
       question: "Dans 'Prison Break', quel est le nom du personnage qui, avant de rejoindre les évadés, est un tueur à gages travaillant pour la mafia, et qui aide Michael Scofield et les autres à s'évader lors de la saison 1 ?",
       options: [
-        "John Abruzzi.",
-        "Theodore 'T-Bag' Bagwell.",
+        "John Abruzzi",
+        "Theodore 'T-Bag' Bagwell",
         "Benjamin Miles Franklin",
-        "James Whistler."
+        "James Whistler"
       ],
-      correctAnswer: "John Abruzzi.",
+      correctAnswer: "John Abruzzi",
       justification: "Interprété par Peter Stormare, Abruzzi est un chef mafieux influent incarcéré à Fox River et joue un rôle clé dans l'évasion en fournissant des ressources et des contacts essentiels à Michael Scofield et aux autres évadés.",
       image: "./img/john_abruzzi.jpg"
     },
     {
       question: "Dans 'La Casa de Papel', quel est le véritable nom de l'homme qui se cache sous le masque de Salvador Dalí et qui porte le nom de 'Le Professeur' ?",
       options: [
-        "Andrés de Fonollosa.",
-        "Sergio Marquina.",
+        "Andrés de Fonollosa",
+        "Sergio Marquina",
         "Rafael de la Mora",
-        "James Whistler."
+        "James Whistler"
       ],
-      correctAnswer: "Sergio Marquina.",
+      correctAnswer: "Sergio Marquina",
       justification: "Le véritable nom du personnage surnommé Le Professeur est Sergio Marquina. Il est le cerveau des braquages et est interprété par l'acteur Álvaro Morte.",
-      image: "./img/the_Professor.webp"
+      image: "./img/el_profesor.jpeg"
     },
     {
       question: "En quelle année est sortie le 1er 'Sister Act' avec Whoopi Goldberg ?",
       options: [
-        "1982.",
-        "1988.",
-        "1992.",
-        "1996."
+        "1982",
+        "1988",
+        "1992",
+        "1996"
       ],
-      correctAnswer: "1992.",
+      correctAnswer: "1992",
       justification: "Cette comédie culte réalisée par Emile Ardolino, suit Deloris Van Cartier (interprétée par Whoopi Goldberg), une chanteuse de cabaret témoin d'un meurtre commis par son petit ami mafieux. Pour la protéger, la police la place sous couverture dans un couvent...",
       image: "./img/sister_act.jpg"
     },
@@ -85,7 +85,7 @@ export const culture_Quizz = {
       image: "./img/croissant_viennois.jpg"
     },
     {
-      question: "L'Île de Madagascar fait partie:",
+      question: "L'Île de Madagascar fait partie :",
       options: [
         "des Îles du trapèze des Mascareignes",
         "des Antilles Françaises",
@@ -106,17 +106,17 @@ export const culture_Quizz = {
       ],
       correctAnswer: "Canberra",
       justification: "La capitale du pays, Canberra, est réputée pour son atmosphère cosmopolite, décontractée et avant-gardiste.",
-      image: "./img/canberra.jpg"
+      image: "./img/canberra.png"
     },
     {
       question: "Où se situe la huitième Merveille du monde ?",
       options: [
-        "Au Mexique: Chichén Itzá",
-        "Au Cambodge: l'ensemble des temples d'Angkor",
-        "En Italie: le Colisée",
-        "Au Pérou: Le Machu Picchu"
+        "Au Mexique : Chichén Itzá",
+        "Au Cambodge : l'ensemble des temples d'Angkor",
+        "En Italie : le Colisée",
+        "Au Pérou : Le Machu Picchu"
       ],
-      correctAnswer: "Au Cambodge: l'ensemble des temples d'Angkor",
+      correctAnswer: "Au Cambodge : l'ensemble des temples d'Angkor",
       justification: "L'ensemble des temples d'Angkor fait prendre conscience à chacun de nous de l'existence passée de civilisations autrefois prééminentes et désormais disparues. Celle d'Angkor a duré du 9ème au 15ème siècle et s'est étendue sur un site urbanisé d'environ 1000km2.",
       image: "./img/temples_anghor.jpg"
     },
@@ -153,8 +153,8 @@ export const culture_Quizz = {
         "1990"
       ],
       correctAnswer: "1950",
-      justification: "Le Seigneur des anneaux (The Lord of the Rings) est un roman de J. R. R. Tolkien paru en trois volumes en 1954 et en 1955. Prenant place dans le monde fictionnel de la Terre du Milieu, il suit la quête du hobbit Frodon Sacquet (Frodo Bessac), qui doit détruire l'Anneau unique afin que celui-ci ne tombe pas entre les mains de Sauron, le Seigneur des ténèbres, qui l'a créé.",
-      image: "./img/les_sda.jpg"
+      justification: "Le Seigneur des anneaux (The Lord of the Rings) est un roman de J. R. R. Tolkien, il l'a écrit à l'âge de 62 ans et a mis 17 ans pour l'écrire. Il paru en trois volumes en 1954 et en 1955. Prenant place dans le monde fictionnel de la Terre du Milieu, il suit la quête du hobbit Frodon Sacquet (Frodo Bessac), qui doit détruire l'Anneau unique afin que celui-ci ne tombe pas entre les mains de Sauron, le Seigneur des ténèbres, qui l'a créé.",
+      image: "./img/lsda.png"
     },
     {
       question: "Lequel de ces auteurs est un homme ?",
@@ -165,8 +165,8 @@ export const culture_Quizz = {
         "Véronique Alunni"
       ],
       correctAnswer: "Yasmina Khadra",
-      justification: "Mohamed Moulessehoul à pris les 2 prénoms de sa femme pour ne pas avoir de problèmes avec l'armée algérienne, car c'était mal vu pour ancien officiel de devenir écrivain.",
-      image: "./img/yasmina_khadra.jpg"
+      justification: "Mohamed Moulessehoul à pris les 2 prénoms de sa femme pour ne pas avoir de problèmes avec l'armée algérienne, car c'était mal vu pour ancien officiel de devenir écrivain. Mais... 😳 il ressemble à Ahmed non ?",
+      image: "./img/yasminaK.avif"
     },
     {
       question: "Lequel de ces auteurs est une femme ?",
@@ -177,8 +177,8 @@ export const culture_Quizz = {
         "Franck Thilliez"
       ],
       correctAnswer: "Fred Vargas",
-      justification: "Fred Vargas s'appelle en réalité Frédérique Audoin-Rouzeau.",
-      image: "./img/fred_vargas.jpeg"
+      justification: "Fred Vargas s'appelle en réalité Frédérique Audoin-Rouzeau. Elle a écrit le célèbre livre 'Pars vite et reviens tard' ",
+      image: "./img/fred_vargas.avif"
     },
     {
       question: "Quelle est la console la plus vendue de tous les temps ?",
@@ -226,7 +226,7 @@ export const culture_Quizz = {
       ],
       correctAnswer: "FPS (Firts Person Shooter)",
       justification: "Call of Duty est un jeu de tir qui ce joue à la première personne soit un FPS.",
-      image: "./img/call_of_duty.jpeg"
+      image: "./img/callofduty.jpeg"
     },
     {
       question: "Quelle marque de téléphone a sorti le jeux Snake ? ",
