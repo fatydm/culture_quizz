@@ -6,15 +6,24 @@ body {
     background-repeat: no-repeat;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    border: 10px solid rgb(57, 25, 57);
     padding: 30px;
-    height: 100vh;
+    height: 100%;
+    background-attachment: fixed;
     margin: 0;
     /* overflow: hidden; */
 }
 
+/* .border {
+    border: 1vw solid rgb(57, 25, 57);
+    height: 96vh;
+    width: 98vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
 #quiz-container {
-    margin: 20px;
+    margin: 60px;
     padding: 20px;
 }
 
@@ -29,20 +38,6 @@ body {
     color: rgb(220, 227, 235);
 }
 
-/* .progress-bar {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-  
-  .progress {
-    height: 10px;
-    width: 0%;
-    background-color: #3a0964;
-    border-radius: 10px;
-} */
-
 #timer {
     border: 10px solid rgb(57, 25, 57);
     border-radius: 40%;
@@ -53,6 +48,19 @@ body {
     font-size: 20px;
     font-family: 'Phudu';
     color: rgb(57, 25, 57);
+
+}
+
+.timer_css {
+    position: absolute;
+    top: 60px;
+    left: 5px;
+}
+
+#progressBar {
+    width: 40%;
+    height: 50px;
+    margin-bottom: 30px;
 }
 
 .question {
@@ -60,8 +68,6 @@ body {
     font-family: 'Phudu';
     font-weight: 600;
     text-align: center;
-    padding: 10px;
-    margin: 20px;
 }
 
 .options {
@@ -88,6 +94,7 @@ button {
     font-weight: 400;
     height: 90px;
     transition: all 0.4s ease-in-out;
+    margin: 20px;
 }
 
 button:hover {
@@ -105,7 +112,7 @@ button:hover {
 .answer-img {
     margin-top: 20px;
     object-fit: cover;
-    width: 400px;
+    width: 350px;
     border: 5px solid rgb(57, 25, 57);
     border-radius: 20px;
     margin-left: calc(50% - 200px);

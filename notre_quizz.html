@@ -14,31 +14,32 @@
 </head>
 
 <body>
+    <div class="border"></div>
+
     <a href="index.html" class="back">Retour à l'accueil</a>
 
-    <div class="progress-bar">
-        <div class="progress" id="progress">    
-    </div>
-    
-    <div id="timer" class="timer_css"></div>
-    
-    <div id="quiz-container">
+        <div id="timer" class="timer_css"></div>
 
-        <!-- Section pour la question -->
-        <div class="question" id="question-text">
-            <p>Question</p>
+        <div id="quiz-container">
+            </div><progress id="progressBar" max="20" value="-1"></progress>
+
+
+            <!-- Section pour la question -->
+            <div class="question" id="question-text">
+                <p>Question</p>
+            </div>
+
+
+            <!-- Section pour les options -->
+            <div class="options" id="options-container"></div>
+
+            <!-- Prévois déjà le design du bouton "suivant" pour passer à la prochaine question -->
+            <div class="button-container">
+                <button id="next-button" class="disabled noTransition">Suivant</button>
+                <button id="check-button" disabled class="noTransition">Valider</button>
+                <button id="replay-button" style="display: none;">Rejouer</button>
+            </div>
+
+            <script type="module" src="game.js" src="buttons.js"></script>
         </div>
-
-
-        <!-- Section pour les options -->
-        <div class="options" id="options-container"></div>
-
-        <!-- Prévois déjà le design du bouton "suivant" pour passer à la prochaine question -->
-        <div class="button-container">
-            <button id="next-button" class="disabled noTransition">Suivant</button>
-            <button id="check-button" disabled class="noTransition">Valider</button>
-            <button id="replay-button" style="display: none;">Rejouer</button>
-        </div>
-
-        <script type="module" src="game.js" src="buttons.js"></script>
 </body>

@@ -13,23 +13,25 @@ const nextButton = document.getElementById('next-button');
 const replayButton = document.getElementById('replay-button');
 const submitButton = document.getElementById('check-button'); // HTML
 
-// SECTION RÉCUPÉRATION DES ÉLÉMENTS JSON
-// const goodAnswer = culture_Quizz.questions[currentQuestionIndex].correctAnswer;
-// const justification = culture_Quizz.questions[currentQuestionIndex].justification;
-// const answerImage = culture_Quizz.questions[currentQuestionIndex].image;
 
 // Pour les bonnes et mauvaises réponses
 const wrongAnswerText = document.createElement('p');
 const correctAnswerText = document.createElement('p');
 const justificationText = document.createElement('p');
 
-
 // SECTION BARRE DE PROGRESSION
-// function updateProgressBar() {
-//     const progress = (currentQuestionIndex / totalQuestions) * 100;
-//     document.getElementById("progress").style.width = `${progress}%`;
-// }
+const udpdateProgress = document.getElementById('progressBar') // Permet de faire apparait et disparaitre la bar de chargement en fonction de la page
 
+// SECTION FONCTIONS RÉUTILISABLES PLUSIEURS FOIS DANS LE CODE
+function hideProgressBar() {
+    document.getElementById('progressBar').style.display = 'none';
+}
+function showProgressBar() {
+    document.getElementById('progressBar').style.display = 'inline-block';
+}
+
+
+// SECTION POUR LE TIMER
 // Pour le timer
 let timer = document.getElementById('timer');
 let time = 15;
@@ -84,6 +86,7 @@ function endOfTime() {
     nextButton.style.display = 'block';
     submitButton.style.display = 'none';
     timer.style.display = 'none';
+    hideProgressBar();
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -116,6 +119,7 @@ function loadQuestion(index) {
     replayButton.style.display = 'none';
     submitButton.style.display = 'none';
 
+    showProgressBar();
     startTimer();
 }
 
@@ -226,6 +230,7 @@ submitButton.addEventListener('click', () => {
     nextButton.style.display = 'block';
     submitButton.style.visibility = 'hidden';
     timer.style.display = 'none';
+    hideProgressBar();
 });
 
 
@@ -247,7 +252,9 @@ nextButton.addEventListener("click", () => {
     }
     console.log(currentQuestionIndex);
     submitButton.style.visibility = 'visible';
+
     confetti.reset();
+    progression ();
 });
 
 
@@ -258,13 +265,21 @@ replayButton.addEventListener('click', () => {
     score = 0;
     loadQuestion(currentQuestionIndex)
     nextButton.style.display = 'none';
-    timer.style.display = 'none'
+    timer.style.display = 'block'
+    progressionbar.value = 0
 })
 
 // Pour mélanger les questions aux prochaines parties
 function shuffle(questions) {
     culture_Quizz.questions.sort(()=> Math.random()-0.5);
 }
+
+// Pour la barre de progression
+function progression () {
+    const progressBar = document.getElementById('progressBar')
+    progressBar.max
+    progressBar.value = currentQuestionIndex
+    }
 
 
 

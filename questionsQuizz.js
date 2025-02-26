@@ -214,7 +214,7 @@ export const culture_Quizz = {
       ],
       correctAnswer: "5",
       justification: "PEGI (Pan European Game Information). Il y a 5 classifications d'âge pour les jeux vidéos : 3, 7, 12, 16 et 18.",
-      image: "./img/pegi.pgn"
+      image: "./img/pegi.png"
     },
     {
       question: "A quel type de jeux appartient le jeux vidéo Call of Duty ?",
