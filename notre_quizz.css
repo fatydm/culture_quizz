@@ -9,11 +9,18 @@ body {
     border: 10px solid rgb(57, 25, 57);
     padding: 30px;
     height: 100vh;
+    margin: 0;
+    overflow: hidden; /*Empêche le scroll */
+}
+
+#quiz-container {
+    margin: 20px;
+    padding: 20px;
 }
 
 .back{
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1em;
     cursor: pointer;
 }
 .back:hover{
@@ -21,31 +28,17 @@ body {
     color: rgb(220, 227, 235);
 }
 
-h1{
-    font-size: 3em;
-}
-
-p{
-    font-size: 2em;
-}
-
 #timer{
     border: 10px solid rgb(57, 25, 57);
     border-radius: 40%;
     width: 10px;
-    padding: 20px;
-    margin: 20px;
-    font-size: 30px;
+    height: 10px;
+    padding: 30px;
+    margin: 30px;
+    font-size: 20px;
     font-family: 'Phudu';
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: rgb(57, 25, 57);
 }
-
-#quiz-container {
-    margin: 20px;
-    padding: 20px;
-} 
 
 .question {
     font-size: 2em;
@@ -59,8 +52,8 @@ p{
 .options {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    font-size: 30px;
+    gap: 5px;
+    font-size: 20px;
 }
 
 .noTransition {
@@ -76,8 +69,8 @@ button {
     color: rgb(220, 227, 235);
     font-size: 1em;
     font-family: 'Phudu';
-    font-weight: 600;
-    height: 100px;
+    font-weight: 400;
+    height: 90px;
     transition: all 0.4s ease-in-out;
 }
 button:hover{

@@ -1,3 +1,10 @@
+/* Remettre à zéro les marges */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+
 body{
     background: linear-gradient(rgb(152, 94, 152), rgb(125, 152, 179));
     background-repeat: no-repeat;
@@ -5,24 +12,31 @@ body{
     text-align: center;
     border: 10px solid rgb(57, 25, 57);
     padding: 10px;
-    height: 100vh;
+    overflow: hidden; /* Empêche le scroll */
+    font-family: 'Phudu';
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
 }
 
+
 h1{
-    font-size: 4.3em;
+    font-size: 3em;
 }
+
 .img_culture_quizz{
     border: 5px solid rgb(57, 25, 57);
     border-radius: 20%;
 }
 
 p{
-    font-size: 1.8em;
+    font-size: 1.3em;
 }
 
 .p_attention{
     font-size: 1em;
     color: purple;
+    margin-top: 5%;
 }
 
 .demarrer_button{
@@ -34,4 +48,15 @@ p{
 .demarrer_button:hover{
     background-color: rgb(143, 50, 131);
     color: rgb(220, 227, 235);
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(57, 25, 57);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 100px;
 }

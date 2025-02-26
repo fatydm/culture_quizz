@@ -15,23 +15,22 @@
 <body>
     <a href="index.html" class="back">Retour à l'accueil</a>
     <div id="quiz-container">
+
         <!-- Section pour la question -->
         <div class="question" id="question-text">
-            
-        </div>
-    
-        <div id="timer" ></div>
-        <!-- Section pour les options -->
-        <div class="options" id="options-container">
+            <p>Question</p>
+    </div>
+
+    <div id="timer" class="timer_css"></div>
         
-        </div>
+        <!-- Section pour les options -->
+    <div class="options" id="options-container"></div>
 
         <!-- Prévois déjà le design du bouton "suivant" pour passer à la prochaine question -->
-        <div class="button-container">
-            <button id="next-button"  class="disabled noTransition">Suivant</button>
-            <button id="check-button" disabled class="noTransition">Valider</button>
-            <button id="replay-button" style="display: none;">Rejouer</button> 
-        </div>
+    <div class="button-container">
+        <button id="next-button"  class="disabled noTransition">Suivant</button>
+        <button id="check-button" disabled class="noTransition">Valider</button>
+        <button id="replay-button" style="display: none;">Rejouer</button> 
     </div>
 
 <script type="module" src="game.js" src="buttons.js" ></script>

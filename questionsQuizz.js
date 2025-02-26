@@ -53,7 +53,7 @@ export const culture_Quizz = {
         "1992.",
         "1996."
       ],
-      correctAnswer: "1992",
+      correctAnswer: "1992.",
       justification: "Cette comédie culte réalisée par Emile Ardolino, suit Deloris Van Cartier (interprétée par Whoopi Goldberg), une chanteuse de cabaret témoin d'un meurtre commis par son petit ami mafieux. Pour la protéger, la police la place sous couverture dans un couvent..."
     },
     {
@@ -108,7 +108,7 @@ export const culture_Quizz = {
         "En Italie: le Colisée",
         "Au Pérou: Le Machu Picchu"
       ],
-      correctAnswer: "Au Cambodge: l'ensemble des temples d'Angkor",
+      correctAnswer: "Au Cambodge: l'ensemble des temples d'Anghor",
       justification: "L'ensemble des temples d'Angkor fait prendre conscience à chacun de nous de l'existence passée de civilisations autrefois prééminentes et désormais disparues. Celle d'Angkor a duré du 9ème au 15ème siècle et s'est étendue sur un site urbanisé d'environ 1000km2."
     },
     {
@@ -153,7 +153,7 @@ export const culture_Quizz = {
         "Véronique Alunni"
       ],
       correctAnswer: "Yasmina Khadra",
-      justification: "Mohamed Moulessehoul à pris les 2 prénoms de sa femme pour ne pas avoir de problèmes."
+      justification: "Mohamed Moulessehoul à pris les 2 prénoms de sa femme pour ne pas avoir de problèmes avec l'armée algérienne, car c'était mal vu pour ancien officiel de devenir écrivain."
     },
     {
       question: "Lequel de ces auteurs est une femme ?",
