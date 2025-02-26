@@ -24,24 +24,6 @@ const correctAnswerText = document.createElement('p');
 const justificationText = document.createElement('p');
 
 
-// {
-//     if (score === 0) {
-//         'Tu n\'as pas eu une seule bonne réponse, c\'est pas grave, tu feras mieux la prochaine fois 😔 !';
-//     }
-//     if (score <= 5) {
-//         'Tu auras le mérite d\'avoir au moins essayé, tu feras mieux la prochaine fois 😉 !';
-//     }
-//     if (score <= 12) {
-//         'Pas mal, pas mal, c\'est plus que la moyenne, c\'est déja ça 😅!';
-//     }
-//     if (score <= 15) {
-//         'Bravo, tu as presque tout juste, prochaine fois, tu seras un vrai boss 😏!';
-//     }
-//     if (score === culture_Quizz.questions.length) {
-//         'Félicitations, tu as eu tout juste, tu es un vrai boss 😎!';
-// };
-
-
 // SECTION BARRE DE PROGRESSION
 // function updateProgressBar() {
 //     const progress = (currentQuestionIndex / totalQuestions) * 100;
@@ -167,6 +149,28 @@ function selectedAnswer(button) {
 
 // SECTION DES ÉVÉNEMENTS SUR LES BOUTONS DU QUIZ
 
+// fonction pour les conditions du score 
+
+function scoreText () {
+    let score = 0;
+
+    if (score === 0) {
+        'Tu n\'as pas eu une seule bonne réponse, c\'est pas grave, tu feras mieux la prochaine fois 😔 !';
+    }
+    if (score <= 5) {
+        'Tu auras le mérite d\'avoir au moins essayé, tu feras mieux la prochaine fois 😉 !';
+    }
+    if (score <= 12) {
+        'Pas mal, pas mal, c\'est plus que la moyenne, c\'est déja ça 😅!';
+    }
+    if (score <= 15) {
+        'Bravo, tu as presque tout juste, prochaine fois, tu seras un vrai boss 😏!';
+    }
+    if (score === culture_Quizz.questions.length) {
+        'Félicitations, tu as eu tout juste, tu es un vrai boss 😎!';
+    };
+};
+
 // bouton valider
 submitButton.addEventListener('click', () => {
 
@@ -236,6 +240,7 @@ nextButton.addEventListener("click", () => {
     } else {
         questions.innerText = 'Fin du Quizz !';
         options.innerHTML = 'Ton score est de ' + score + "/" + culture_Quizz.questions.length;
+        scoreText() 
         nextButton.style.display = 'none';
         replayButton.style.display = 'block';
         submitButton.style.display = 'none';

@@ -10,8 +10,7 @@ body {
     padding: 30px;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
-    /*Empêche le scroll */
+    /* overflow: hidden; */
 }
 
 #quiz-container {
