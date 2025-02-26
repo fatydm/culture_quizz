@@ -1,26 +1,59 @@
 import { culture_Quizz } from './questionsQuizz.js';
 
 // Etat du Quiz
-let currentQuestionIndex = 0;
-// La réponse choisie par le joueur
+let currentQuestionIndex = 0; 
 let selectedOption = '';
 let score = 0;
-// Récupération des éléments HTML
+
+
+// SECTION RÉCUPÉRATION DES ÉLÉMENTS HTML
 const questions = document.getElementById('question-text');
 const options = document.getElementById('options-container');
 const nextButton = document.getElementById('next-button');
 const replayButton = document.getElementById('replay-button');
 const submitButton = document.getElementById('check-button'); // HTML
 
+// SECTION RÉCUPÉRATION DES ÉLÉMENTS JSON
+// const goodAnswer = culture_Quizz.questions[currentQuestionIndex].correctAnswer;
+// const justification = culture_Quizz.questions[currentQuestionIndex].justification;
+// const answerImage = culture_Quizz.questions[currentQuestionIndex].image;
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Pour les bonnes et mauvaises réponses
+const wrongAnswerText = document.createElement('p');
+const correctAnswerText = document.createElement('p');
+const justificationText = document.createElement('p');
+
+
+// {
+//     if (score === 0) {
+//         'Tu n\'as pas eu une seule bonne réponse, c\'est pas grave, tu feras mieux la prochaine fois 😔 !';
+//     }
+//     if (score <= 5) {
+//         'Tu auras le mérite d\'avoir au moins essayé, tu feras mieux la prochaine fois 😉 !';
+//     }
+//     if (score <= 12) {
+//         'Pas mal, pas mal, c\'est plus que la moyenne, c\'est déja ça 😅!';
+//     }
+//     if (score <= 15) {
+//         'Bravo, tu as presque tout juste, prochaine fois, tu seras un vrai boss 😏!';
+//     }
+//     if (score === culture_Quizz.questions.length) {
+//         'Félicitations, tu as eu tout juste, tu es un vrai boss 😎!';
+// };
+
+
+// SECTION BARRE DE PROGRESSION
+// function updateProgressBar() {
+//     const progress = (currentQuestionIndex / totalQuestions) * 100;
+//     document.getElementById("progress").style.width = `${progress}%`;
+// }
+
 // Pour le timer
 let timer = document.getElementById('timer');
 let time = 15;
 let countdownInterval = null; // Stocke l'intervalle du timer
 
 timer.innerText = '15';
-
 
 // Fonction pour démarrer le timer
 function startTimer() {
@@ -44,11 +77,28 @@ function stopTimer() {
     clearInterval(countdownInterval);
 }
 
-
 // Si temps écoulé, on affiche la bonne réponse et la justification et on cache les boutons
 function endOfTime() {
+
+    const goodAnswer = culture_Quizz.questions[currentQuestionIndex].correctAnswer;
+    const justification = culture_Quizz.questions[currentQuestionIndex].justification;
+    const answerImage = culture_Quizz.questions[currentQuestionIndex].image;
+    
     questions.innerText = 'Temps écoulé 😕 !';
-    options.innerHTML = 'La bonne réponse était :' + '<br>' + culture_Quizz.questions[currentQuestionIndex].correctAnswer + '<br>' + culture_Quizz.questions[currentQuestionIndex].justification;
+    options.innerHTML = '';
+    
+    correctAnswerText.innerText = 'La bonne réponse était :' + ' ' + goodAnswer;
+    justificationText.innerText = justification;
+
+    options.appendChild(correctAnswerText);
+    options.appendChild(justificationText);
+    
+    const img = document.createElement('img')
+        img.setAttribute('src', answerImage)
+        img.setAttribute('alt', 'image de la réponse')
+        img.className = 'answer-img'
+        options.appendChild(img)
+
     nextButton.style.display = 'block';
     submitButton.style.display = 'none';
     timer.style.display = 'none';
@@ -56,8 +106,9 @@ function endOfTime() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// Fonction pour afficher une question basée sur l'index actuel
+// FONCTION POUR GÉNÉRER LES QUESTIONS
 function loadQuestion(index) {
+    
     stopTimer();
     // Vider le conteneur des options
     options.innerHTML = '';
@@ -89,8 +140,7 @@ function loadQuestion(index) {
 loadQuestion(currentQuestionIndex);
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+// FONCTION POUR SÉLECTIONNER UNE RÉPONSE
 
 function selectedAnswer(button) {
 
@@ -115,22 +165,33 @@ function selectedAnswer(button) {
 };
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+// SECTION DES ÉVÉNEMENTS SUR LES BOUTONS DU QUIZ
 
 // bouton valider
 submitButton.addEventListener('click', () => {
-    stopTimer();
+
     const goodAnswer = culture_Quizz.questions[currentQuestionIndex].correctAnswer;
     const justification = culture_Quizz.questions[currentQuestionIndex].justification;
-
+    const answerImage = culture_Quizz.questions[currentQuestionIndex].image;
+    
     stopTimer();
-    console.log(selectedOption);
-    console.log(goodAnswer);
 
     if (selectedOption === goodAnswer) {
         questions.innerText = 'Bonne réponse boss 😎';
-        options.innerHTML = '' + justification;
+        options.innerText = '';
+
+        correctAnswerText.innerText = 'La bonne réponse était :' + ' ' + goodAnswer;
+        justificationText.innerText = justification;
+
+        options.appendChild(correctAnswerText);
+        options.appendChild(justificationText);
+
+        const img = document.createElement('img')
+        img.setAttribute('src', answerImage)
+        img.setAttribute('alt', 'image de la réponse')
+        img.className = 'answer-img'
+        options.appendChild(img)
+
         score++
 
         confetti({
@@ -141,7 +202,20 @@ submitButton.addEventListener('click', () => {
 
     } else {
         questions.innerText = 'Mauvaise réponse 🫣';
-        options.innerHTML = 'La bonne réponse était :' + ' ' + goodAnswer + '<br>' + justification  // utilisation backticks
+        options.innerText = ''
+        
+        wrongAnswerText.innerText = 'La bonne réponse était :' + ' ' + goodAnswer ;
+        
+        justificationText.innerText = justification
+
+        options.appendChild(wrongAnswerText)
+        options.appendChild(justificationText)
+
+        const img = document.createElement('img')
+        img.setAttribute('src', answerImage)
+        img.setAttribute('alt', 'image de la réponse')
+        img.className = 'answer-img'
+        options.appendChild(img)
     }
 
     // timerActive = false;
@@ -174,12 +248,18 @@ nextButton.addEventListener("click", () => {
 
 // bouton rejouer
 replayButton.addEventListener('click', () => {
+    shuffle(questions)
     currentQuestionIndex = 0
     score = 0;
     loadQuestion(currentQuestionIndex)
     nextButton.style.display = 'none';
     timer.style.display = 'none'
 })
+
+// Pour mélanger les questions aux prochaines parties
+function shuffle(questions) {
+    culture_Quizz.questions.sort(()=> Math.random()-0.5);
+}
 
 
 

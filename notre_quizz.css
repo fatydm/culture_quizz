@@ -10,7 +10,8 @@ body {
     padding: 30px;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /*Empêche le scroll */
+    overflow: hidden;
+    /*Empêche le scroll */
 }
 
 #quiz-container {
@@ -18,17 +19,32 @@ body {
     padding: 20px;
 }
 
-.back{
+.back {
     text-decoration: none;
     font-size: 1em;
     cursor: pointer;
 }
-.back:hover{
+
+.back:hover {
     background-color: rgb(143, 50, 131);
     color: rgb(220, 227, 235);
 }
 
-#timer{
+/* .progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+  
+  .progress {
+    height: 10px;
+    width: 0%;
+    background-color: #3a0964;
+    border-radius: 10px;
+} */
+
+#timer {
     border: 10px solid rgb(57, 25, 57);
     border-radius: 40%;
     width: 10px;
@@ -54,6 +70,7 @@ body {
     flex-direction: column;
     gap: 5px;
     font-size: 20px;
+    width: 100%;
 }
 
 .noTransition {
@@ -73,15 +90,24 @@ button {
     height: 90px;
     transition: all 0.4s ease-in-out;
 }
-button:hover{
+
+button:hover {
     background-color: rgb(73, 54, 91);
     color: white;
-    font-size: 40px;
+    font-size: 30px;
 }
 
-.button-container{
-    margin: 10px;
+.button-container {
+    margin-top: 80px;
     display: flex;
     justify-content: flex-end;
 }
 
+.answer-img {
+    margin-top: 20px;
+    object-fit: cover;
+    width: 400px;
+    border: 5px solid rgb(57, 25, 57);
+    border-radius: 20px;
+    margin-left: calc(50% - 200px);
+}
