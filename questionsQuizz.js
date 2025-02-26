@@ -238,7 +238,7 @@ export const culture_Quizz = {
       ],
       correctAnswer: "Nokia",
       justification: "On a tous connu le fameux jeu du serpent dans notre Nokia 3310. Si tu ne l'as pas connu... t'as raté ton enfance ! Plus sérieusement, le jeu Snake est apparu en 1997 sur le Nokia 6110 et a été rendu célèbre sur le 3310.",
-      image: "./img/nokia.jpeg"
+      image: "./img/nokia.jpg"
     },
   ]
 };

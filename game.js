@@ -33,16 +33,16 @@ function showProgressBar() {
 
 // SECTION POUR LE TIMER
 // Pour le timer
-let timer = document.getElementById('timer');
-let time = 15;
 let countdownInterval = null; // Stocke l'intervalle du timer
-
-timer.innerText = '15';
 
 // Fonction pour démarrer le timer
 function startTimer() {
+    let timer = document.getElementById('timer');
+    timer.innerText = '15';
+    let time;
+
     clearInterval(countdownInterval); // Supprime tout timer existant
-    time = 15;
+    time = 90;
     timer.innerText = time;
     timer.style.display = "block";
 
@@ -157,21 +157,22 @@ function selectedAnswer(button) {
 
 function scoreText () {
     let score = 0;
+    let scoreText;
 
     if (score === 0) {
-        'Tu n\'as pas eu une seule bonne réponse, c\'est pas grave, tu feras mieux la prochaine fois 😔 !';
+        scoreText = 'Tu n\'as pas eu une seule bonne réponse... Es-tu sûr.e d\'avoir bien lu les réponses ? 🤔 !';
     }
-    if (score <= 5) {
-        'Tu auras le mérite d\'avoir au moins essayé, tu feras mieux la prochaine fois 😉 !';
+    if (score <= 5 / culture_Quizz.questions.length) {
+        scoreText = 'Tu auras le mérite d\'avoir au moins essayé, c\'est déja ça 😅 ! ';
     }
-    if (score <= 12) {
-        'Pas mal, pas mal, c\'est plus que la moyenne, c\'est déja ça 😅!';
+    if (score <= 14 / culture_Quizz.questions.length) {
+        scoreText = 'Pas mal, pas mal, c\'est plus que la moyenne, tu feras mieux la prochaine fois 😉 !';
     }
-    if (score <= 15) {
-        'Bravo, tu as presque tout juste, prochaine fois, tu seras un vrai boss 😏!';
+    if (score <= 19 / culture_Quizz.questions.length) {
+        scoreText = 'Bravo, tu as presque tout juste, prochaine fois, tu seras un vrai boss 😏!';
     }
     if (score === culture_Quizz.questions.length) {
-        'Félicitations, tu as eu tout juste, tu es un vrai boss 😎!';
+        scoreText = 'Félicitations, tu as eu tout juste, tu es un vrai boss 😎!';
     };
 };
 
@@ -277,7 +278,7 @@ function shuffle(questions) {
 // Pour la barre de progression
 function progression () {
     const progressBar = document.getElementById('progressBar')
-    progressBar.max
+    progressBar.max = culture_Quizz.questions.length;
     progressBar.value = currentQuestionIndex
     }
 
