@@ -29,24 +29,6 @@ function hideProgressBar() {
 function showProgressBar() {
     document.getElementById('progressBar').style.display = 'inline-block';
 }
-function hideNextButton() {
-    document.getElementById('next-button').style.display = 'none';
-}
-function showNextButton() {
-    document.getElementById('next-button').style.display = 'block'
-}
-function hideSubmitButton() {
-    document.getElementById('next-button').style.display = 'none'
-}
-function showSubmitButton() {
-    document.getElementById('next-button').style.display = 'block'
-}
-function hideTimer() {
-    document.getElementById('next-button').style.display = 'none'
-}
-function showTimer(){
-document.getElementById('next-button').style.display = 'none'
-}
 
 // SECTION POUR LE TIMER
 // Pour le timer
