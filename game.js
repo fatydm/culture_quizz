@@ -28,7 +28,7 @@ function hideProgressBar() {
 }
 function showProgressBar() {
     document.getElementById('progressBar').style.display = 'inline-block';
-}
+} 
 
 // SECTION POUR LE TIMER
 // Pour le timer
@@ -145,7 +145,6 @@ function selectedAnswer(button) {
     submitButton.style.display = 'block';
 
     submitButton.disabled = false;
-
 };
 
 
@@ -153,26 +152,6 @@ function selectedAnswer(button) {
 
 // fonction pour les conditions du score 
 
-function scoreText () {
-    let score = 0;
-    let scoreText;
-
-    if (score === 0) {
-        scoreText = 'Tu n\'as pas eu une seule bonne réponse... Es-tu sûr.e d\'avoir bien lu les réponses ? 🤔 !';
-    }
-    if (score <= 5 / culture_Quizz.questions.length) {
-        scoreText = 'Tu auras le mérite d\'avoir au moins essayé, c\'est déja ça 😅 ! ';
-    }
-    if (score <= 14 / culture_Quizz.questions.length) {
-        scoreText = 'Pas mal, pas mal, c\'est plus que la moyenne, tu feras mieux la prochaine fois 😉 !';
-    }
-    if (score <= 19 / culture_Quizz.questions.length) {
-        scoreText = 'Bravo, tu as presque tout juste, prochaine fois, tu seras un vrai boss 😏!';
-    }
-    if (score === culture_Quizz.questions.length) {
-        scoreText = 'Félicitations, tu as eu tout juste, tu es un vrai boss 😎!';
-    };
-};
 
 // bouton valider
 submitButton.addEventListener('click', () => {
@@ -244,7 +223,7 @@ nextButton.addEventListener("click", () => {
     } else {
         questions.innerText = 'Fin du Quizz !';
         options.innerHTML = 'Ton score est de ' + score + "/" + culture_Quizz.questions.length;
-        scoreText() 
+        
         nextButton.style.display = 'none';
         replayButton.style.display = 'block';
         submitButton.style.display = 'none';
@@ -264,7 +243,8 @@ replayButton.addEventListener('click', () => {
     currentQuestionIndex = 0
     score = 0;
 
-    loadQuestion(currentQuestionIndex)
+    loadQuestion(currentQuestionIndex);
+    confetti.reset();
 
     nextButton.style.display = 'none';
     timer.style.display = 'block'
