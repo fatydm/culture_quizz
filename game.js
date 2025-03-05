@@ -1,10 +1,9 @@
 import { culture_Quizz } from './questionsQuizz.js';
 
 // Etat du Quiz
-let currentQuestionIndex = 0; 
+let currentQuestionIndex = 0;
 let selectedOption = '';
 let score = 0;
-
 
 // SECTION RÉCUPÉRATION DES ÉLÉMENTS HTML
 const questions = document.getElementById('question-text');
@@ -12,15 +11,9 @@ const options = document.getElementById('options-container');
 const nextButton = document.getElementById('next-button');
 const replayButton = document.getElementById('replay-button');
 const submitButton = document.getElementById('check-button'); // HTML
-
-
-// Pour les bonnes et mauvaises réponses
 const wrongAnswerText = document.createElement('p');
 const correctAnswerText = document.createElement('p');
 const justificationText = document.createElement('p');
-
-// SECTION BARRE DE PROGRESSION
-const udpdateProgress = document.getElementById('progressBar') // Permet de faire apparait et disparaitre la bar de chargement en fonction de la page
 
 // SECTION FONCTIONS RÉUTILISABLES PLUSIEURS FOIS DANS LE CODE
 function hideProgressBar() {
@@ -28,12 +21,27 @@ function hideProgressBar() {
 }
 function showProgressBar() {
     document.getElementById('progressBar').style.display = 'inline-block';
-} 
+}
+
+// CRÉATION DES AUDIOS DU QUIZZ
+const audioFiles = ["./sounds/correct_answer.mp3", "./sounds/qvgdm.mp3", "./sounds/wrongAnswer.mp3"];
+const audios = [];
+
+audioFiles.forEach((file) => {
+    const audio = document.createElement("audio");
+    audio.src = file;
+    document.body.appendChild(audio);
+    audios.push(audio);
+});
+
+function stopAudio(){
+    audios[1].pause();
+    audios[1].currentTime = 0;
+}
 
 // SECTION POUR LE TIMER
 // Pour le timer
 let countdownInterval = null; // Stocke l'intervalle du timer
-
 // Fonction pour démarrer le timer
 function startTimer() {
     let timer = document.getElementById('timer');
@@ -54,7 +62,8 @@ function startTimer() {
             endOfTime();
         }
     }, 1000);
-}
+    audios[1].play();
+};
 
 function stopTimer() {
     clearInterval(countdownInterval);
@@ -66,42 +75,41 @@ function endOfTime() {
     const goodAnswer = culture_Quizz.questions[currentQuestionIndex].correctAnswer;
     const justification = culture_Quizz.questions[currentQuestionIndex].justification;
     const answerImage = culture_Quizz.questions[currentQuestionIndex].image;
-    
+
     questions.innerText = 'Temps écoulé 😕 !';
     options.innerHTML = '';
-    
+
     correctAnswerText.innerText = 'La bonne réponse était :' + ' ' + goodAnswer;
     justificationText.innerText = justification;
 
     options.appendChild(correctAnswerText);
     options.appendChild(justificationText);
-    
+
     const img = document.createElement('img')
-        img.setAttribute('src', answerImage)
-        img.setAttribute('alt', 'image de la réponse')
-        img.className = 'answer-img'
-        options.appendChild(img)
+    img.setAttribute('src', answerImage)
+    img.setAttribute('alt', 'image de la réponse')
+    img.className = 'answer-img'
+    options.appendChild(img)
 
     nextButton.style.display = 'block';
     submitButton.style.display = 'none';
     timer.style.display = 'none';
-    hideProgressBar();
-};
 
+    hideProgressBar();
+
+    audios[2].play();
+};
 
 // FONCTION POUR GÉNÉRER LES QUESTIONS
 function loadQuestion(index) {
-    
+
     stopTimer();
     // Vider le conteneur des options
     options.innerHTML = '';
-
     // Récupérer la question actuelle
     const currentQuestion = culture_Quizz.questions[index];
-
     // Injecter la question dans le HTML
     questions.innerText = currentQuestion.question;
-
     // Injecter les options dans le HTML 
     currentQuestion.options.forEach(option => {
         const button = document.createElement('button');
@@ -123,9 +131,7 @@ function loadQuestion(index) {
 
 loadQuestion(currentQuestionIndex);
 
-
 // FONCTION POUR SÉLECTIONNER UNE RÉPONSE
-
 function selectedAnswer(button) {
 
     selectedOption = button.innerText; // Récup
@@ -147,11 +153,7 @@ function selectedAnswer(button) {
     submitButton.disabled = false;
 };
 
-
 // SECTION DES ÉVÉNEMENTS SUR LES BOUTONS DU QUIZ
-
-// fonction pour les conditions du score 
-
 
 // bouton valider
 submitButton.addEventListener('click', () => {
@@ -159,7 +161,7 @@ submitButton.addEventListener('click', () => {
     const goodAnswer = culture_Quizz.questions[currentQuestionIndex].correctAnswer;
     const justification = culture_Quizz.questions[currentQuestionIndex].justification;
     const answerImage = culture_Quizz.questions[currentQuestionIndex].image;
-    
+
     stopTimer();
 
     if (selectedOption === goodAnswer) {
@@ -185,13 +187,14 @@ submitButton.addEventListener('click', () => {
             spread: 100,
             origin: { y: 0.6 }
         });
+        audios[0].play();
 
     } else {
         questions.innerText = 'Mauvaise réponse 🫣';
         options.innerText = ''
-        
-        wrongAnswerText.innerText = 'La bonne réponse était :' + ' ' + goodAnswer ;
-        
+
+        wrongAnswerText.innerText = 'La bonne réponse était :' + ' ' + goodAnswer;
+
         justificationText.innerText = justification
 
         options.appendChild(wrongAnswerText)
@@ -202,15 +205,16 @@ submitButton.addEventListener('click', () => {
         img.setAttribute('alt', 'image de la réponse')
         img.className = 'answer-img'
         options.appendChild(img)
+        audios[2].play();
     }
 
-    // timerActive = false;
     nextButton.style.display = 'inline-block';
     submitButton.style.visibility = 'hidden';
     timer.style.display = 'none';
-    hideProgressBar();
-});
 
+    hideProgressBar();
+    stopAudio();
+});
 
 // bouton suivant
 nextButton.addEventListener("click", () => {
@@ -223,7 +227,7 @@ nextButton.addEventListener("click", () => {
     } else {
         questions.innerText = 'Fin du Quizz !';
         options.innerHTML = 'Ton score est de ' + score + "/" + culture_Quizz.questions.length;
-        
+
         nextButton.style.display = 'none';
         replayButton.style.display = 'block';
         submitButton.style.display = 'none';
@@ -231,9 +235,10 @@ nextButton.addEventListener("click", () => {
     submitButton.style.visibility = 'visible';
 
     confetti.reset();
-    progression ();
+    progression();
+    
+    audios[1].play();
 });
-
 
 // bouton rejouer
 replayButton.addEventListener('click', () => {
@@ -253,11 +258,11 @@ replayButton.addEventListener('click', () => {
 
 // Pour mélanger les questions aux prochaines parties
 function shuffle(questions) {
-    culture_Quizz.questions.sort(()=> Math.random()-0.5);
+    culture_Quizz.questions.sort(() => Math.random() - 0.5);
 }
 
 // Pour la barre de progression
-function progression () {
+function progression() {
     const progressBar = document.getElementById('progressBar')
     progressBar.max = culture_Quizz.questions.length;
     progressBar.value = currentQuestionIndex
