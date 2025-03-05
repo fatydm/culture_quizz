@@ -106,7 +106,7 @@ function loadQuestion(index) {
     stopTimer();
     // Vider le conteneur des options
     options.innerHTML = '';
-    // Récupérer la question actuelle
+    // Récupérer la questgition actuelle
     const currentQuestion = culture_Quizz.questions[index];
     // Injecter la question dans le HTML
     questions.innerText = currentQuestion.question;
