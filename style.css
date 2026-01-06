@@ -58,39 +58,45 @@ p{
 ===================== */
 @media (max-width: 768px) {
     body {
-    text-align: center;  
-    padding-top: 20%;
-    min-height: 100vh;
+    /* text-align: center;   */
+    padding-top: 10px;
+    /* min-height: 100vh; */
     }
 
     .demarrer_button{
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
     .p_attention{
         margin-top: 30px;
-        font-size: 1.2em;
+        font-size: 0.7em;
     }
     p{
-        font-size: 1.3em;
+        font-size: 0.9em;
+    }
+    footer{
+        font-size: 0.7em;
     }
 }
 
 @media (max-width: 480px) {
     body{
-        padding-top: 30%;
+        padding-top: 10px;
     }
     h1{
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
     p{
-        font-size: 1em;
+        font-size: 0.8em;
+    }
+    .demarrer_button{
+        font-size: 0.9em;
     }
     .p_attention{
         margin-top: 30px;
-        font-size: 1em;
+        font-size: 0.7em;
     }
     footer{
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
 }
 
