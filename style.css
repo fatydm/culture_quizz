@@ -3,40 +3,37 @@ body{
     background-repeat: no-repeat;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    border: 10px solid rgb(57, 25, 57);
-    padding: 10px;
-    /* overflow: hidden; */
+    border: 5px solid rgb(57, 25, 57);
+    padding-top: 20px;
+    overflow: hidden;
     font-family: 'Phudu';
     height: 100vh; 
     margin: 0;
-    padding: 0;
 }
 
-
 h1{
-    margin-top: 20px;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .img_culture_quizz{
-    border: 5px solid rgb(57, 25, 57);
-    border-radius: 20%;
+    border: 2px solid rgb(57, 25, 57);
+    border-radius: 20px;
     height: 100px;
 }
 
 p{
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .p_attention{
-    font-size: 0.7em;
+    font-size: 0.8em;
     color: purple;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .demarrer_button{
     text-decoration: underline;
-    font-size: 1em;
+    font-size: 1.3em;
     cursor: pointer;
 }
 
@@ -52,6 +49,71 @@ p{
     background-color: rgb(57, 25, 57);
     color: white;
     text-align: center;
-    padding: 5px;
-    height: 50px;
+    font-weight: 100;
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+    body {
+    text-align: center;  
+    padding-top: 20%;
+    min-height: 100vh;
+    }
+
+    .demarrer_button{
+        font-size: 1.3em;
+    }
+    .p_attention{
+        margin-top: 30px;
+        font-size: 1.2em;
+    }
+    p{
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        padding-top: 30%;
+    }
+    h1{
+        font-size: 1.6em;
+    }
+    p{
+        font-size: 1em;
+    }
+    .p_attention{
+        margin-top: 30px;
+        font-size: 1em;
+    }
+    footer{
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 380px) {
+    body{
+        padding-top: 10%;
+    }
+    .img_culture_quizz{
+    border: 2px solid rgb(57, 25, 57);
+    border-radius: 20px;
+    height: 100px;
+}
+    h1{
+        font-size: 1em;
+    }
+    p{
+        font-size: 0.9em;
+    }
+    .p_attention{
+        margin-top: 30px;
+        font-size: 0.9em;
+    }
+    footer{
+        font-size: 0.9em;
+    }
 }
