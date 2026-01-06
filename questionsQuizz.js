@@ -25,7 +25,7 @@ export const culture_Quizz = {
       image: "./img/chateau-if-marseille.jpg"
     },
     {
-      question: "Dans 'Prison Break', quel est le nom du personnage qui, avant de rejoindre les évadés, est un tueur à gages travaillant pour la mafia, et qui aide Michael Scofield et les autres à s'évader lors de la saison 1 ?",
+      question: "Dans 'Prison Break', quel personnage avant de rejoindre les évadés est un tueur à gages travaillant pour la mafia (saison 1) ?",
       options: [
         "John Abruzzi",
         "Theodore 'T-Bag' Bagwell",
@@ -141,7 +141,7 @@ export const culture_Quizz = {
         "8"
       ],
       correctAnswer: "7",
-      justification: "Traduite dans 67 langues, environ 450 millions de livres vendus, une adaptation sur grand écran : la saga littéraire Harry Potter, née sous la plume de l’auteure britannique J. K. Rowling, a remporté un vif succès et compte des fans dans le monde entier. Il y a bien 7 tomes mais 8 films.",
+      justification: "Traduite dans 67 langues, environ 450 millions de livres vendus, une adaptation sur grand écran : la saga littéraire Harry Potter, née sous la plume de l’auteure britannique J. K. Rowling, a remporté un vif succès. Il y a bien 7 tomes mais 8 films.",
       image: "./img/Saga_Harry_Potter_Livres.webp"
     },
     {
@@ -153,7 +153,7 @@ export const culture_Quizz = {
         "1990"
       ],
       correctAnswer: "1950",
-      justification: "Le Seigneur des anneaux (The Lord of the Rings) est un roman de J. R. R. Tolkien, il l'a écrit à l'âge de 62 ans et a mis 17 ans pour l'écrire. Il paru en trois volumes en 1954 et en 1955. Prenant place dans le monde fictionnel de la Terre du Milieu, il suit la quête du hobbit Frodon Sacquet (Frodo Bessac), qui doit détruire l'Anneau unique afin que celui-ci ne tombe pas entre les mains de Sauron, le Seigneur des ténèbres, qui l'a créé.",
+      justification: "Le Seigneur des anneaux est un roman de J. R. R. Tolkien, il l'a écrit à l'âge de 62 ans et a mis 17 ans pour le terminer. Il paru en trois volumes en 1954 et en 1955.",
       image: "./img/lsda.png"
     },
     {
@@ -165,7 +165,7 @@ export const culture_Quizz = {
         "Véronique Alunni"
       ],
       correctAnswer: "Yasmina Khadra",
-      justification: "Mohamed Moulessehoul à pris les 2 prénoms de sa femme pour ne pas avoir de problèmes avec l'armée algérienne, car c'était mal vu pour ancien officiel de devenir écrivain. Mais... 😳 il ressemble à Ahmed non ?",
+      justification: "Mohamed Moulessehoul à pris les 2 prénoms de sa femme pour ne pas avoir de problèmes avec l'armée algérienne, car c'était mal vu pour ancien officier de devenir écrivain.",
       image: "./img/yasminaK.avif"
     },
     {
@@ -237,7 +237,7 @@ export const culture_Quizz = {
         "Nokia"
       ],
       correctAnswer: "Nokia",
-      justification: "On a tous connu le fameux jeu du serpent dans notre Nokia 3310. Si tu ne l'as pas connu... t'as raté ton enfance ! Plus sérieusement, le jeu Snake est apparu en 1997 sur le Nokia 6110 et a été rendu célèbre sur le 3310.",
+      justification: "On a tous connu le fameux jeu du serpent dans notre Nokia 3310. Si tu ne l'as pas connu... tu as raté ton enfance ! Plus sérieusement, le jeu Snake est apparu en 1997 sur le Nokia 6110 et a été rendu célèbre sur le 3310.",
       image: "./img/nokia.jpg"
     },
   ]
