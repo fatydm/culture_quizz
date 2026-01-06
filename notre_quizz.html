@@ -16,13 +16,16 @@
 <body>
     <div class="border"></div>
 
-    <a href="index.html" class="back">Retour à l'accueil</a>
+    <a href="index.html" class="back">
+        Retour à l'accueil
+    </a>
 
-        <div id="timer" class="timer_css"></div>
+        <div class="timer-wrapper">
+            <div id="timer"></div>
+            <progress id="progressBar" max="20" value="-1"></progress>
+        </div>
 
         <div id="quiz-container">
-            </div><progress id="progressBar" max="20" value="-1"></progress>
-
 
             <!-- Section pour la question -->
             <div class="question" id="question-text">
@@ -36,7 +39,7 @@
             <!-- Prévois déjà le design du bouton "suivant" pour passer à la prochaine question -->
             <div class="button-container">
                 <button id="next-button" class="disabled noTransition">Suivant</button>
-                <button id="check-button" disabled class="noTransition">Valider</button>
+                <button id="check-button" class=" disabled noTransition">Valider</button>
                 <button id="replay-button" style="display: none;">Rejouer</button>
             </div>
 
