@@ -14,17 +14,18 @@ body{
 
 
 h1{
-    font-size: 2em;
+    margin-top: 20px;
+    font-size: 1.5em;
 }
 
 .img_culture_quizz{
     border: 5px solid rgb(57, 25, 57);
     border-radius: 20%;
-    height: 150px;
+    height: 100px;
 }
 
 p{
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .p_attention{
@@ -35,7 +36,7 @@ p{
 
 .demarrer_button{
     text-decoration: underline;
-    font-size: 1.3em;
+    font-size: 1em;
     cursor: pointer;
 }
 
