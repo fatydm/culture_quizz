@@ -5,7 +5,7 @@ body{
     text-align: center;
     border: 10px solid rgb(57, 25, 57);
     padding: 10px;
-    overflow: hidden; /* Empêche le scroll */
+    /* overflow: hidden; */
     font-family: 'Phudu';
     height: 100vh; 
     margin: 0;
@@ -14,16 +14,17 @@ body{
 
 
 h1{
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .img_culture_quizz{
     border: 5px solid rgb(57, 25, 57);
     border-radius: 20%;
+    height: 150px;
 }
 
 p{
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 .p_attention{
@@ -33,8 +34,8 @@ p{
 }
 
 .demarrer_button{
-    text-decoration: none;
-    font-size: 1.5em;
+    text-decoration: underline;
+    font-size: 1.3em;
     cursor: pointer;
 }
 
@@ -50,6 +51,6 @@ p{
     background-color: rgb(57, 25, 57);
     color: white;
     text-align: center;
-    padding: 10px;
-    height: 100px;
+    padding: 5px;
+    height: 50px;
 }
