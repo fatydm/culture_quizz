@@ -5,7 +5,7 @@
 ===================== */
 body {
     margin: 0;
-    padding: 30px;
+    /* padding: 30px; */
     min-height: 100vh;
     background: linear-gradient(rgb(152, 94, 152), rgb(125, 152, 179));
     background-attachment: fixed;
@@ -135,17 +135,17 @@ body {
 ===================== */
 .button-container {
     margin-top: 10px;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     /* gap: 10px; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .button-container button {
     min-width: 160px;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
-    border: 2px solid rgb(193, 187, 100);
+    border: 2px solid rgb(150, 100, 193);
     background-color: rgb(1, 1, 54);
     color: rgb(220, 227, 235);
     font-size: 1em;
@@ -177,6 +177,16 @@ body {
     object-fit: cover;
     border: 2px solid rgb(57, 25, 57);
     border-radius: 10px;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(57, 25, 57);
+    color: white;
+    text-align: center;
+    font-weight: 100;
 }
 
 /* =====================
@@ -218,4 +228,11 @@ body {
         font-size: 0.7em;
     }
 
+    p{
+        font-size: 0.8em;
+    }
+
+    footer{
+        font-size: 0.9em;
+    }
 }
